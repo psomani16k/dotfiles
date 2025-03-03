@@ -1,0 +1,10 @@
+# ignore everything
+/*
+
+# include the following folders
+!/.gitignore
+!/wezterm/
+!/nvim/
+!/hypr/
+!/waybar/
+
