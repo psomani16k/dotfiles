@@ -7,8 +7,6 @@ local config = wezterm.config_builder()
 -- fps
 config.max_fps = 165
 
--- config.enable_wayland = false
-
 -- disabling the tab bar
 config.enable_tab_bar = false
 
@@ -16,7 +14,7 @@ config.enable_tab_bar = false
 config.color_scheme = 'Dark+'
 
 -- font
-config.font = wezterm.font('Hasklug Nerd Font Mono')
+config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
 
 -- keybindings
 config.keys = {
