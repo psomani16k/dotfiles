@@ -15,6 +15,7 @@ config.color_scheme = 'Dark+'
 
 -- font
 config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
+config.font_size = 20
 
 -- keybindings
 config.keys = {
