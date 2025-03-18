@@ -5,6 +5,4 @@
 !/.gitignore
 !/wezterm/
 !/nvim/
-!/hypr/
-!/waybar/
-
+!/fish/
