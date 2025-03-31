@@ -10,7 +10,8 @@ return {
 		local treesitter = require("nvim-treesitter.configs")
 
 		-- configure treesitter
-		treesitter.setup({ -- enable syntax highlighting
+		treesitter.setup({
+			-- enable syntax highlighting
 
 			highlight = {
 				enable = true,
@@ -20,28 +21,7 @@ return {
 			indent = { enable = true, disable = { "dart" } },
 
 			-- ensure these language parsers are installed
-			ensure_installed = {
-				"bash",
-				"c",
-				"cpp",
-				"dart",
-				"gitignore",
-				"java",
-				"javascript",
-				"json",
-				"kotlin",
-				"lua",
-				"markdown",
-				"markdown_inline",
-				"python",
-				"rust",
-				"toml",
-				"typescript",
-				"vim",
-				"vimdoc",
-				"yaml",
-				"markdown"
-			},
+			auto_install = true,
 			incremental_selection = {
 				enable = true,
 				keymaps = {

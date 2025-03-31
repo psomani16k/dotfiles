@@ -15,7 +15,7 @@ return {
 			}
 		})
 		require("mason-lspconfig").setup {
-			ensure_installed = { "markdown_oxide", "clangd", "lua_ls", "rust_analyzer" },
+			ensure_installed = { "clangd", "lua_ls", "rust_analyzer" },
 		}
 		local border = {
 			{ "🭽", "FloatBorder" },
@@ -34,6 +34,7 @@ return {
 			["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
 		}
 		require("lspconfig").lua_ls.setup { handlers = handlers }
+		require("lspconfig").dartls.setup { handlers = handlers }
 		require("lspconfig").rust_analyzer.setup { handlers = handlers }
 		require("lspconfig").clangd.setup { handlers = handlers }
 		require("lspconfig").markdown_oxide.setup { handlers = handlers }
