@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- tab creation and traversal
-keymap.set("n", "<leader>k", "<cmd>tabp<CR>", { desc = "Go to the tab on the left of the current tab" })
-keymap.set("n", "<leader>j", "<cmd>tabn<CR>", { desc = "Go to the tab on the right of the current tab" })
+keymap.set("n", "<leader>h", "<cmd>tabp<CR>", { desc = "Go to the tab on the left of the current tab" })
+keymap.set("n", "<leader>l", "<cmd>tabn<CR>", { desc = "Go to the tab on the right of the current tab" })
 keymap.set("n", "<leader>tn", ":Texplore<CR>", { desc = "Make a new tab" })
 keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "Close current tab" })
 
@@ -22,13 +22,18 @@ vim.api.nvim_set_keymap('v', '<C-/>', "gc", { noremap = false, silent = false })
 -- which key
 keymap.set("n", "<leader>ww", "<cmd>WhichKey<cr>", { desc = "Show available keymaps" })
 
+-- git stuff
+keymap.set("n", "<leader>gp", "<cmd>:Gitsigns preview_hunk_inline<cr>", { desc = "Show available keymaps" })
+keymap.set("n", "<leader>grr", "<cmd>:Gitsigns reset_hunk<cr>", { desc = "Show available keymaps" })
+keymap.set("n", "<leader>gt", "<cmd>:Gitsigns toggle_current_line_blame<cr>", { desc = "Show available keymaps" })
+
 -- telescopy
 keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 keymap.set("n", "<leader>tr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 keymap.set("n", "<leader>ts", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 keymap.set("n", "<leader>tf", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 
--- shortcuts to various things....
+-- files
 keymap.set("n", "<leader>ee", ":Ex<CR>", { desc = "Switch to NetRW" })
 
 -- LSP
@@ -46,11 +51,7 @@ keymap.set("n", "<leader>ll", function() vim.lsp.buf.signature_help() end, { des
 keymap.set("n", "<leader>er", function() vim.diagnostic.open_float() end, { desc = "Show the error message" })
 
 -- flutter bloc
-keymap.set("n", "<leader>cfb", function()
-		require("flutter-bloc").create_bloc()
-	end,
-	{ desc = '[C]reate [F]lutter [B]loc' })
-keymap.set("n", "<leader>cfc", function()
-		require("flutter-bloc").create_cubit()
-	end,
-	{ desc = '[C]reate [F]lutter [C]ubit' })
+keymap.set("n", "<leader>cfb", function() require("flutter-bloc").create_bloc() end,
+  { desc = '[C]reate [F]lutter [B]loc' })
+keymap.set("n", "<leader>cfc", function() require("flutter-bloc").create_cubit() end,
+  { desc = '[C]reate [F]lutter [C]ubit' })

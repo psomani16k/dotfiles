@@ -7,6 +7,7 @@ opt.scrolloff = 8
 
 -- tabs and indentations
 opt.tabstop = 2
+opt.expandtab = true
 opt.shiftwidth = 2
 opt.autoindent = true
 opt.wrap = false
@@ -16,7 +17,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- color and themeing
-opt.termguicolors = false
+opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
@@ -33,4 +34,4 @@ opt.splitbelow = true
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 -- dont show vitual text
-vim.diagnostic.config({ virtual_text = false })
+vim.diagnostic.config({ virtual_text = true })
