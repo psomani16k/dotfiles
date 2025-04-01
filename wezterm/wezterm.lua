@@ -11,7 +11,12 @@ config.max_fps = 165
 config.enable_tab_bar = false
 
 -- Colorscheme
-config.color_scheme = 'Dark+'
+config.color_scheme = 'tokyonight_night'
+config.colors = {
+  background = '#000000'
+}
+
+config.window_background_opacity = 0.5
 
 -- font
 config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
