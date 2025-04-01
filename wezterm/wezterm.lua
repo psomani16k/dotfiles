@@ -16,7 +16,7 @@ config.colors = {
   background = '#000000'
 }
 
-config.window_background_opacity = 0.5
+config.window_background_opacity = 0.3
 
 -- font
 config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
@@ -34,22 +34,22 @@ config.keys = {
 	{
 		key = 'h',
 		mods = 'ALT|CTRL',
-		action = wezterm.action.AdjustPaneSize { 'Left', 5 }
+		action = wezterm.action.AdjustPaneSize { 'Left', 3 }
 	},
 	{
 		key = 'j',
 		mods = 'ALT|CTRL',
-		action = wezterm.action.AdjustPaneSize { 'Down', 2 }
+		action = wezterm.action.AdjustPaneSize { 'Down', 1 }
 	},
 	{
 		key = 'k',
 		mods = 'ALT|CTRL',
-		action = wezterm.action.AdjustPaneSize { 'Up', 2 }
+		action = wezterm.action.AdjustPaneSize { 'Up', 1 }
 	},
 	{
 		key = 'l',
 		mods = 'ALT|CTRL',
-		action = wezterm.action.AdjustPaneSize { 'Right', 5 }
+		action = wezterm.action.AdjustPaneSize { 'Right', 3 }
 	},
 	-- navigate panes
 	{
