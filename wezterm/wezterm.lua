@@ -16,7 +16,7 @@ config.colors = {
   background = '#000000'
 }
 
-config.window_background_opacity = 0.3
+config.window_background_opacity = 0.4
 
 -- font
 config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
