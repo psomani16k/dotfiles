@@ -4,6 +4,7 @@
 # include the following folders
 !/.gitignore
 !/wezterm/
+!/ghostty/
 !/nvim/
 !/fish/
 !.setup_fedora.sh

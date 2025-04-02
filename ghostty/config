@@ -1,0 +1,39 @@
+# THEMES 
+
+theme = Dark+
+font-family = CaskaydiaMono Nerd Font
+window-decoration = false
+
+# KEYBINDS
+
+# opening a new window
+keybind = ctrl+alt+j=new_split:down
+keybind = ctrl+alt+l=new_split:right
+keybind = ctrl+alt+h=new_split:left
+keybind = ctrl+alt+k=new_split:up
+
+# closing things
+keybind = ctrl+alt+q=close_surface
+
+# navigating splits
+keybind = alt+j=goto_split:bottom
+keybind = alt+k=goto_split:top
+
+# resizing splits
+keybind = alt+shift+j=resize_split:down,10
+keybind = alt+shift+l=resize_split:right,10
+keybind = alt+shift+h=resize_split:left,10
+keybind = alt+shift+k=resize_split:up,10
+
+# tabs
+keybind = ctrl+alt+n=new_tab
+keybind = alt+l=next_tab
+keybind = alt+h=previous_tab
+
+# fullscreen
+keybind = ctrl+alt+f=toggle_fullscreen
+keybind = ctrl+alt+d=toggle_window_decorations
+
+# copy paste
+keybind = ctrl+alt+c=copy_to_clipboard
+keybind = ctrl+alt+v=paste_from_clipboard
