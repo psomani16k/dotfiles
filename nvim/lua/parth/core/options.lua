@@ -1,3 +1,4 @@
+-- OPTS
 local opt = vim.opt
 
 -- line numbering and stuff
@@ -33,5 +34,16 @@ opt.splitbelow = true
 
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
--- dont show vitual text
-vim.diagnostic.config({ virtual_text = true })
+-- DIAGNOSTICS
+local diagnostic = vim.diagnostic
+
+diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({
+  update_in_insert = true,
+})
+
+vim.diagnostic.config({
+  float = {
+    border = "double", -- Or "single", "rounded", "shadow", etc.
+  },
+})

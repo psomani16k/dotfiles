@@ -30,13 +30,12 @@ return {
 
 		-- LSP settings (for overriding per client)
 		local handlers = {
-			["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-			["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+			["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "double" }),
+			["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "double" }),
 		}
 		require("lspconfig").lua_ls.setup { handlers = handlers }
 		require("lspconfig").dartls.setup { handlers = handlers }
 		require("lspconfig").rust_analyzer.setup { handlers = handlers }
 		require("lspconfig").clangd.setup { handlers = handlers }
-		require("lspconfig").markdown_oxide.setup { handlers = handlers }
 	end
 }
