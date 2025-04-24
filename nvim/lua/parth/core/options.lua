@@ -42,8 +42,3 @@ vim.diagnostic.config({
   update_in_insert = true,
 })
 
-vim.diagnostic.config({
-  float = {
-    border = "double", -- Or "single", "rounded", "shadow", etc.
-  },
-})

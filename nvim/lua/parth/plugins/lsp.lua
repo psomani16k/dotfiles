@@ -1,41 +1,37 @@
 return {
-	"neovim/nvim-lspconfig",
-	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		"williamboman/mason.nvim",
-	},
-	config = function()
-		require("mason").setup({
-			ui = {
-				icons = {
-					package_installed = "✓",
-					package_pending = "➜",
-					package_uninstalled = "✗"
-				}
-			}
-		})
-		require("mason-lspconfig").setup {
-			ensure_installed = { "clangd", "lua_ls", "rust_analyzer" },
-		}
-		local border = {
-			{ "🭽", "FloatBorder" },
-			{ "▔", "FloatBorder" },
-			{ "🭾", "FloatBorder" },
-			{ "▕", "FloatBorder" },
-			{ "🭿", "FloatBorder" },
-			{ "▁", "FloatBorder" },
-			{ "🭼", "FloatBorder" },
-			{ "▏", "FloatBorder" },
-		}
+  "neovim/nvim-lspconfig",
+  dependencies = {
+    "williamboman/mason-lspconfig.nvim",
+    "williamboman/mason.nvim",
+  },
+  config = function()
+    require("mason").setup({
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗"
+        }
+      }
+    })
+    require("mason-lspconfig").setup {
+      ensure_installed = { "clangd", "lua_ls", "rust_analyzer" },
+    }
+    -- local border = {
+    -- 	{ "🭽", "FloatBorder" },
+    -- 	{ "▔", "FloatBorder" },
+    -- 	{ "🭾", "FloatBorder" },
+    -- 	{ "▕", "FloatBorder" },
+    -- 	{ "🭿", "FloatBorder" },
+    -- 	{ "▁", "FloatBorder" },
+    -- 	{ "🭼", "FloatBorder" },
+    -- 	{ "▏", "FloatBorder" },
+    -- }
 
-		-- LSP settings (for overriding per client)
-		local handlers = {
-			["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "double" }),
-			["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "double" }),
-		}
-		require("lspconfig").lua_ls.setup { handlers = handlers }
-		require("lspconfig").dartls.setup { handlers = handlers }
-		require("lspconfig").rust_analyzer.setup { handlers = handlers }
-		require("lspconfig").clangd.setup { handlers = handlers }
-	end
+    -- LSP settings (for overriding per client)
+    require("lspconfig").lua_ls.setup {}
+    require("lspconfig").dartls.setup {}
+    require("lspconfig").rust_analyzer.setup {}
+    require("lspconfig").clangd.setup {}
+  end
 }

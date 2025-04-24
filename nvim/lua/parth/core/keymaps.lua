@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-local keymap = vim.keymap
+local keymap = vim.keymapkey
 
 -- tab creation and traversal
 keymap.set("n", "<leader>h", "<cmd>tabp<CR>", { desc = "Go to the tab on the left of the current tab" })
@@ -38,7 +38,7 @@ keymap.set("n", "<leader>ee", ":Ex<CR>", { desc = "Switch to NetRW" })
 
 -- LSP
 keymap.set("n", "<leader>lf", function() vim.lsp.buf.definition() end, { desc = "LSP definition" })
-keymap.set("n", "<leader>lh", function() vim.lsp.buf.hover() end, { desc = "LSP hover" })
+keymap.set("n", "<leader>lh", function() vim.lsp.buf.hover({ border = "double" }) end, { desc = "LSP hover" })
 keymap.set("n", "<leader>lws", function() vim.lsp.buf.workspace_symbol() end, { desc = "LSP workspace symbol" })
 keymap.set("n", "<leader>lof", function() vim.diagnostic.open_float() end, { desc = "LSP open float" })
 keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, { desc = "LSP goto next" })
@@ -47,8 +47,10 @@ keymap.set("n", "<leader>.", function() vim.lsp.buf.code_action() end, { desc = 
 keymap.set("n", "<leader>lr", function() vim.lsp.buf.references() end, {})
 keymap.set("n", "<leader>ln", function() vim.lsp.buf.rename() end, { desc = "Rename" })
 keymap.set("n", "<leader>ii", function() vim.lsp.buf.format({ async = false }) end, { desc = "Format using LSP" })
-keymap.set("n", "<leader>ll", function() vim.lsp.buf.signature_help() end, { desc = "Signature Help" })
-keymap.set("n", "<leader>er", function() vim.diagnostic.open_float() end, { desc = "Show the error message" })
+keymap.set("n", "<leader>ll", function() vim.lsp.buf.signature_help({ border = "double" }) end,
+  { desc = "Signature Help" })
+keymap.set("n", "<leader>er", function() vim.diagnostic.open_float({ border = "double" }) end,
+  { desc = "Show the error message" })
 
 -- flutter bloc
 keymap.set("n", "<leader>cfb", function() require("flutter-bloc").create_bloc() end,
