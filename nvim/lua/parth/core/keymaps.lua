@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-local keymap = vim.keymapkey
+local keymap = vim.keymap
 
 -- tab creation and traversal
 keymap.set("n", "<leader>h", "<cmd>tabp<CR>", { desc = "Go to the tab on the left of the current tab" })
