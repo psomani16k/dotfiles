@@ -4,8 +4,9 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- fps
-config.max_fps = 60
+-- rendering and fps
+config.max_fps = 165
+-- config.front_end = "WebGpu"
 
 -- disabling the tab bar
 config.enable_tab_bar = false
@@ -15,7 +16,7 @@ config.color_scheme = 'tokyonight_night'
 config.colors = {
   background = 'black'
 }
-config.window_background_opacity = 0.2
+config.window_background_opacity = 0.4
 config.kde_window_background_blur = true
 
 -- Padding
