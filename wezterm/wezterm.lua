@@ -16,7 +16,7 @@ config.color_scheme = 'tokyonight_night'
 config.colors = {
   background = 'black'
 }
-config.window_background_opacity = 0.4
+config.window_background_opacity = 0.5
 config.kde_window_background_blur = true
 
 -- Padding
