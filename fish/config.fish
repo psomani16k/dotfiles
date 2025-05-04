@@ -9,3 +9,5 @@ set ANDROID_SDK_ROOT "$HOME/Android/Sdk"
 set ANDROID_HOME "$ANDROID_SDK_ROOT"
 set PATH "$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools:$PATH"
 set ANDROID_NDK_HOME "/home/parth/Android/Sdk/ndk/26.3.11579264"
+
+starship init fish | source

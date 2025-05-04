@@ -12,11 +12,8 @@ config.max_fps = 165
 config.enable_tab_bar = false
 
 -- Colorscheme
-config.color_scheme = 'tokyonight_night'
-config.colors = {
-  background = 'black'
-}
-config.window_background_opacity = 0.5
+config.color_scheme = 'gruvbox'
+config.window_background_opacity = 0.3
 config.kde_window_background_blur = true
 
 -- Padding

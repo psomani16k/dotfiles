@@ -7,4 +7,4 @@
 !/ghostty/
 !/nvim/
 !/fish/
-!.setup_fedora.sh
+!starship.toml
