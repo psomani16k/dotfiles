@@ -13,7 +13,7 @@ config.enable_tab_bar = false
 
 -- Colorscheme
 config.color_scheme = 'gruvbox'
-config.window_background_opacity = 0.3
+config.window_background_opacity = 0.5
 config.kde_window_background_blur = true
 
 -- Padding
