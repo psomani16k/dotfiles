@@ -13,7 +13,7 @@ config.enable_tab_bar = false
 
 -- Colorscheme
 config.color_scheme = 'gruvbox'
-config.window_background_opacity = 0.5
+config.window_background_opacity = 0.6
 config.kde_window_background_blur = true
 
 -- Padding
@@ -25,7 +25,7 @@ config.window_padding = {
 }
 
 -- cursor thickness
--- config.cursor_thickness = 2
+config.cursor_thickness = 2
 config.default_cursor_style = 'SteadyBar'
 
 -- font

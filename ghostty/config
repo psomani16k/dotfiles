@@ -4,7 +4,7 @@ theme = tokyonight_night
 font-family = CaskaydiaCove Nerd Font Mono
 window-decoration = false
 gtk-tabs-location = hidden
-command = /usr/bin/fish --login --interactive
+command = /usr/bin/bash
 
 background-blur = true
 background-opacity = 0.5

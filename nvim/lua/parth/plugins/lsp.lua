@@ -17,16 +17,6 @@ return {
     require("mason-lspconfig").setup {
       ensure_installed = { "clangd", "lua_ls", "rust_analyzer" },
     }
-    -- local border = {
-    -- 	{ "🭽", "FloatBorder" },
-    -- 	{ "▔", "FloatBorder" },
-    -- 	{ "🭾", "FloatBorder" },
-    -- 	{ "▕", "FloatBorder" },
-    -- 	{ "🭿", "FloatBorder" },
-    -- 	{ "▁", "FloatBorder" },
-    -- 	{ "🭼", "FloatBorder" },
-    -- 	{ "▏", "FloatBorder" },
-    -- }
 
     -- LSP settings (for overriding per client)
     require("lspconfig").lua_ls.setup {}

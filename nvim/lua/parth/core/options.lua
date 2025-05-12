@@ -34,12 +34,12 @@ opt.splitbelow = true
 
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
+opt.fillchars = { eob = ' ' }
+
 -- DIAGNOSTICS
 local diagnostic = vim.diagnostic
 
 diagnostic.config({ virtual_text = true })
-vim.diagnostic.config({
+diagnostic.config({
   update_in_insert = true,
 })
-
-opt.fillchars = { eob = ' ' }
