@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- tab creation and traversal
-keymap.set("n", "<leader>h", "<cmd>tabp<CR>", { desc = "Go to the tab on the left of the current tab" })
-keymap.set("n", "<leader>l", "<cmd>tabn<CR>", { desc = "Go to the tab on the right of the current tab" })
+keymap.set("n", "<leader>th", "<cmd>tabp<CR>", { desc = "Go to the tab on the left of the current tab" })
+keymap.set("n", "<leader>tl", "<cmd>tabn<CR>", { desc = "Go to the tab on the right of the current tab" })
 keymap.set("n", "<leader>tn", ":Texplore<CR>", { desc = "Make a new tab" })
 keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "Close current tab" })
 
@@ -57,3 +57,7 @@ keymap.set("n", "<leader>cfb", function() require("flutter-bloc").create_bloc() 
   { desc = '[C]reate [F]lutter [B]loc' })
 keymap.set("n", "<leader>cfc", function() require("flutter-bloc").create_cubit() end,
   { desc = '[C]reate [F]lutter [C]ubit' })
+
+-- csv
+keymap.set("n", "<leader>cv", "<cmd>CsvViewToggle delimiter=, quote_char=' comment=# display_mode=border <CR>",
+  { desc = 'Toggle csv view' })

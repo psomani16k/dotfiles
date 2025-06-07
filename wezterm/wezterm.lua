@@ -6,14 +6,18 @@ local config = wezterm.config_builder()
 
 -- rendering and fps
 config.max_fps = 165
--- config.front_end = "WebGpu"
+config.front_end = "OpenGL"
 
--- disabling the tab bar
-config.enable_tab_bar = false
+-- tab bar
+config.hide_tab_bar_if_only_one_tab = true
+config.tab_bar_at_bottom = true
 
 -- Colorscheme
-config.color_scheme = 'gruvbox'
-config.window_background_opacity = 0.6
+-- config.color_scheme = 'gruvbox'
+-- config.window_background_opacity = 0.5
+-- config.kde_window_background_blur = true
+config.enable_wayland = true
+config.window_background_opacity = 0.5
 config.kde_window_background_blur = true
 
 -- Padding

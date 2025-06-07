@@ -38,8 +38,9 @@ opt.fillchars = { eob = ' ' }
 
 -- DIAGNOSTICS
 local diagnostic = vim.diagnostic
-
-diagnostic.config({ virtual_text = true })
 diagnostic.config({
+  virtual_text = true,
   update_in_insert = true,
 })
+
+
