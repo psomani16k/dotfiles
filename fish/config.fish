@@ -17,7 +17,6 @@ set -x JAVA_HOME "/opt/android-studio/jbr"
 set PATH "/home/parth/flutterSDK/bin:$PATH"
 set PATH "/opt/android-studio/bin/:$PATH"
 set PATH "$PATH:/home/parth/flutter/bin"
-set PATH "$PATH:/home/parth/bin"
 set PATH "$PATH:$(go env GOPATH)/bin"
 
 # starship
