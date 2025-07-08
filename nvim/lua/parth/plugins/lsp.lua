@@ -16,7 +16,7 @@ return {
     })
 
     require("mason-lspconfig").setup {
-      ensure_installed = { "clangd", "lua_ls", "rust_analyzer", "markdown_oxide" },
+      ensure_installed = { "clangd", "lua_ls", "rust_analyzer", "markdown_oxide", "gopls" },
     }
 
     -- LSP settings (for overriding per client)
