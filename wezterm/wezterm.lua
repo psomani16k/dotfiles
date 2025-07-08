@@ -13,11 +13,9 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
 -- Colorscheme
--- config.color_scheme = 'gruvbox'
--- config.window_background_opacity = 0.5
--- config.kde_window_background_blur = true
+config.color_scheme = 'gruvbox'
 config.enable_wayland = true
-config.window_background_opacity = 0.5
+config.window_background_opacity = 0.6
 config.kde_window_background_blur = true
 
 -- Padding
@@ -34,7 +32,7 @@ config.default_cursor_style = 'SteadyBar'
 
 -- font
 config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
-config.font_size = 14
+config.font_size = 18
 
 -- keybindings
 config.keys = {
