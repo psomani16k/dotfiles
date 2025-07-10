@@ -16,7 +16,7 @@ return {
     })
 
     require("mason-lspconfig").setup {
-      ensure_installed = { "clangd", "lua_ls", "rust_analyzer", "markdown_oxide", "gopls" },
+      ensure_installed = { "clangd", "lua_ls", "rust_analyzer", "markdown_oxide", "gradle_ls" },
     }
 
     -- LSP settings (for overriding per client)
@@ -27,5 +27,12 @@ return {
     -- require("lspconfig").clangd.setup {}
     -- require("lspconfig").markdown_oxide.setup {}
     require('lspconfig').taplo.setup {}
+    require('lspconfig').gopls.setup {
+      settings = {
+        gopls = {
+          completeUnimported = true,
+        }
+      }
+    }
   end
 }
