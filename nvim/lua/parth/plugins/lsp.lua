@@ -27,7 +27,10 @@ return {
     -- require("lspconfig").clangd.setup {}
     -- require("lspconfig").markdown_oxide.setup {}
     require('lspconfig').taplo.setup {}
+
+    local util = require 'lspconfig.util'
     require('lspconfig').gopls.setup {
+      root_dir = util.root_pattern('.git'),
       settings = {
         gopls = {
           completeUnimported = true,
