@@ -24,6 +24,7 @@ set -x CCACHE_EXEC "/usr/bin/ccache"
 set -x EDITOR "/usr/bin/nvim"
 
 # go and bazel related stuff
-set -x USE_BAZEL_VERSION 6.5.0
+set -x USE_BAZEL_VERSION 6.4.0
 set -x JAVA_HOME /usr/lib/jvm/jre-21-openjdk
+
 
