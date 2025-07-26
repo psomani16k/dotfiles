@@ -25,3 +25,6 @@ starship init fish | source
 # android build caching
 set -x USE_CCACHE 1
 set -x CCACHE_EXEC "/usr/bin/ccache"
+
+
+set -x LD_LIBRARY_PATH "~/kicad-source-mirror/build/release/common/gal:$LD_LIBRARY_PATH"

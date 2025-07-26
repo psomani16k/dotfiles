@@ -15,7 +15,7 @@ config.tab_bar_at_bottom = true
 -- Colorscheme
 config.color_scheme = 'gruvbox'
 config.enable_wayland = true
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.8
 config.kde_window_background_blur = true
 
 -- Padding
