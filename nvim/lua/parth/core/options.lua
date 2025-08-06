@@ -33,8 +33,10 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-
 opt.fillchars = { eob = ' ' }
+
+-- line length
+opt.textwidth = 0
 
 -- DIAGNOSTICS
 local diagnostic = vim.diagnostic
@@ -42,5 +44,3 @@ diagnostic.config({
   virtual_text = true,
   update_in_insert = true,
 })
-
-
