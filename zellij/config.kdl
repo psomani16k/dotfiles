@@ -11,6 +11,7 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Ctrl ;" { SwitchToMode "pane"; }
         bind "Ctrl '" { SwitchToMode "tab"; }
+        bind "Ctrl s" { SwitchToMode "entersearch"; }
 
         // actions
         bind "Alt h" { MoveFocus "Left"; }
@@ -22,7 +23,7 @@ keybinds clear-defaults=true {
     }
     pane {
         // modes
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl c" { SwitchToMode "normal"; }
         bind "Ctrl r" { SwitchToMode "resize"; }
         
         // actions
@@ -34,7 +35,7 @@ keybinds clear-defaults=true {
     }
     tab {
         // modes
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl c" { SwitchToMode "normal"; }
 
         // actions
         bind "Ctrl n" { NewTab; SwitchToMode "Normal"; }
@@ -43,20 +44,26 @@ keybinds clear-defaults=true {
         
     }
     resize {
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl c" { SwitchToMode "normal"; }
         bind "Ctrl h" { Resize "Left"; }
         bind "Ctrl j" { Resize "Down"; }
         bind "Ctrl k" { Resize "Up"; }
         bind "Ctrl l" { Resize "Right"; }
     }
     move {
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl c" { SwitchToMode "normal"; }
     }
     scroll {
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl c" { SwitchToMode "normal"; }
     }
     search {
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl c" { SwitchToMode "normal"; }
+        bind "n" { Search "down"; }
+        bind "p" { Search "up"; }
+    }
+    entersearch {
+        bind "Ctrl c" "Esc" { SwitchToMode "normal"; }
+        bind "Enter" { SwitchToMode "search"; }
     }
     session {
         bind "Ctrl g" { SwitchToMode "normal"; }
