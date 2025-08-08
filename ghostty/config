@@ -45,3 +45,6 @@ keybind = ctrl+alt+f=toggle_fullscreen
 # copy paste
 keybind = ctrl+alt+c=copy_to_clipboard
 keybind = ctrl+alt+v=paste_from_clipboard
+
+# terminal
+command = /usr/bin/fish --login --interactive

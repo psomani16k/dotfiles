@@ -5,17 +5,17 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- rendering and fps
-config.max_fps = 165
-config.front_end = "OpenGL"
+config.max_fps = 120
+config.default_prog = { '/usr/bin/fish', '-l' }
 
 -- tab bar
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
 -- Colorscheme
-config.color_scheme = 'gruvbox'
+-- config.color_scheme = 'gruvbox'
 config.enable_wayland = true
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.7
 config.kde_window_background_blur = true
 
 -- Padding
@@ -32,7 +32,7 @@ config.default_cursor_style = 'SteadyBar'
 
 -- font
 config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
-config.font_size = 18
+config.font_size = 14
 
 -- keybindings
 config.keys = {

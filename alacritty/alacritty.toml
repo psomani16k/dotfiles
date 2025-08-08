@@ -58,3 +58,11 @@ action = "Copy"
 key = "V"
 mods = "Control|Alt"
 action = "Paste"
+
+[terminal]
+shell = { program = "/bin/fish"}
+
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+]

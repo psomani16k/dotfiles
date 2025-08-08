@@ -1,5 +1,5 @@
 return {
-  'lcheylus/overlength.nvim',
+  'psomani16k/overlength.nvim',
   config = function()
     require('overlength').setup({
       -- Overlength highlighting enabled by default
@@ -18,7 +18,7 @@ return {
       -- 1: Use `textwidth, unless it's 0, then use config.default_overlength.
       -- 2: Always use textwidth. There will be no highlighting where
       --    textwidth == 0, unless added explicitly
-      textwidth_mode = 1,
+      textwidth_mode = 2,
       -- Default overlength with no filetype
       default_overlength = 80,
       -- How many spaces past your overlength to start highlighting
@@ -27,9 +27,26 @@ return {
       highlight_to_eol = true,
 
       -- List of filetypes to disable overlength highlighting
-      disable_ft = { 'netrw', 'qf', 'help', 'man', 'checkhealth', 'lazy',
-        'packer', 'NvimTree', 'Telescope', 'Live Grep', 'WhichKey',
-        'diagnostic' },
+      disable_ft = {
+        'netrw',
+        'qf',
+        'help',
+        'man',
+        'checkhealth',
+        'lazy',
+        'packer',
+        'NvimTree',
+        'Telescope',
+        'Live Grep',
+        'WhichKey',
+        'diagnostic',
+      },
+
+      enable_ft = {
+        'go',
+        'dart',
+        'lua',
+      }
     })
   end
 }

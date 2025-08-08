@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# start wezterm
+# start terminal 
 
-wezterm &
+alacritty &
 
 # start chrome
 
