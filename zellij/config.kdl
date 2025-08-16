@@ -109,7 +109,7 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "tokyo-night-dark"
+theme "gruvbox_dark"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -118,8 +118,8 @@ default_mode "normal"
  
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
-// 
-// default_shell "fish"
+
+default_shell "fish"
  
 // Choose the path to override cwd that zellij will use for opening new panes
 // 
