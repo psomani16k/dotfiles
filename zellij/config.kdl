@@ -20,6 +20,7 @@ keybinds clear-defaults=true {
         bind "Alt l" { MoveFocus "Right"; }
         // bind "Ctrl Alt q" { CloseFocus; }
         bind "Ctrl Alt e" { EditScrollback; }
+        bind "Alt i" { ToggleFloatingPanes; }
     }
     pane {
         // modes
