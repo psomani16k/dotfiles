@@ -13,9 +13,11 @@ set PATH "$PATH:/opt/android-studio/bin"
 set PATH "$PATH:/home/parth/flutter/bin"
 set PATH "$PATH:$(go env GOPATH)/bin"
 
-
 # starship
 starship init fish | source
+
+# cargo bins
+source ~/.cargo/env.fish
 
 # android build caching
 set -x USE_CCACHE 1
@@ -44,3 +46,5 @@ if not set -q ZELLIJ
         kill $fish_pid                                                                                                                                                         
     end                                                                                                                                                                        
 end
+
+set -x GITLAB_HOME /srv/gitlab

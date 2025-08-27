@@ -15,7 +15,7 @@ return {
           },
         },
         widget_guides = {
-          enabled = true,
+          enabled = false,
         },
         closing_tags = {
           highlight = 'Comment',
