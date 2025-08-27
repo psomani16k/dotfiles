@@ -14,10 +14,10 @@ keybinds clear-defaults=true {
         bind "Ctrl s" { SwitchToMode "entersearch"; }
 
         // actions
-        bind "Alt h" { MoveFocus "Left"; }
-        bind "Alt j" { MoveFocus "Down"; }
-        bind "Alt k" { MoveFocus "Up"; }
-        bind "Alt l" { MoveFocus "Right"; }
+        bind "Alt Shift h" { MoveFocus "Left"; }
+        bind "Alt Shift j" { MoveFocus "Down"; }
+        bind "Alt Shift k" { MoveFocus "Up"; }
+        bind "Alt Shift l" { MoveFocus "Right"; }
         // bind "Ctrl Alt q" { CloseFocus; }
         bind "Ctrl Alt e" { EditScrollback; }
         bind "Alt i" { ToggleFloatingPanes; }

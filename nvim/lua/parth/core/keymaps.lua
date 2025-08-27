@@ -8,9 +8,21 @@ keymap.set("n", "<leader>tn", ":Texplore<CR>", { desc = "Make a new tab" })
 keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "Close current tab" })
 
 -- split creation and traversal
-keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to the tab on the left of the current tab" })
-keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to the tab on the right of the current tab" })
-keymap.set("n", "<leader>wn", "<cmd>vnew<CR>", { desc = "Make a new tab" })
+---- deleting orignal keymap
+---- setting new keymaps
+keymap.set("n", "<M-h>", "<cmd>wincmd h<CR>", { noremap = true, silent = true, desc = "Go to the pane on the left" })
+keymap.set("n", "<M-j>", "<cmd>wincmd j<CR>", { noremap = true, silent = true, desc = "Go to the pane on the down" })
+keymap.set("n", "<M-k>", "<cmd>wincmd k<CR>", { noremap = true, silent = true, desc = "Go to the pane on the up" })
+keymap.set("n", "<M-l>", "<cmd>wincmd l<CR>", { noremap = true, silent = true, desc = "Go to the pane on the right" })
+
+keymap.set("n", "<C-A-h>", "<cmd>vertical resize -2<CR>", { silent = true, desc = "Decrease pane width" })
+keymap.set("n", "<C-A-l>", "<cmd>vertical resize +2<CR>", { silent = true, desc = "Increase pane width" })
+keymap.set("n", "<C-A-j>", "<cmd>resize -2<CR>", { silent = true, desc = "Decrease pane height" })
+keymap.set("n", "<C-A-k>", "<cmd>resize +2<CR>", { silent = true, desc = "Increase pane height" })
+
+keymap.set("n", "<C-A-r>", "<cmd>vsplit<CR>", { silent = true, desc = "Vertical split" })
+keymap.set("n", "<C-A-d>", "<cmd>split<CR>", { silent = true, desc = "Horizontal split" })
+
 
 -- misc
 keymap.set("n", "<leader>cs", ":nohl<CR>", { desc = "Clear Search Highlights" })
