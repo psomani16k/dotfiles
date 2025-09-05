@@ -1,6 +1,6 @@
 [window]
-opacity = 1
-blur = false
+opacity = 0.8
+blur = true
 decorations = "Transparent"
 startup_mode = "Fullscreen"
 decorations_theme_variant = "Dark"
@@ -41,7 +41,7 @@ mods = "Control|Alt"
 action = "Paste"
 
 [terminal]
-shell = { program = "/bin/fish"}
+shell = { program = "/bin/fish" }
 
 [general]
 import = ["~/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"]
