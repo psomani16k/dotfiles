@@ -58,7 +58,8 @@ keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, { desc = "LSP g
 keymap.set("n", "<leader>.", function() vim.lsp.buf.code_action() end, { desc = "Show LSP powered code actions" })
 keymap.set("n", "<leader>lr", function() vim.lsp.buf.references() end, {})
 keymap.set("n", "<leader>ln", function() vim.lsp.buf.rename() end, { desc = "Rename" })
-keymap.set("n", "<leader>ii", function() vim.lsp.buf.format({ async = false }) end, { desc = "Format using LSP" })
+keymap.set("n", "<leader>ii", function() require("conform").format({ async = true, lsp_fallback = true }) end,
+  { desc = "Format using LSP" })
 keymap.set("n", "<leader>ll", function() vim.lsp.buf.signature_help({ border = "double" }) end,
   { desc = "Signature Help" })
 keymap.set("n", "<leader>er", function() vim.diagnostic.open_float({ border = "double" }) end,

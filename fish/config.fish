@@ -6,6 +6,8 @@ end
 alias rmrf="rm -rf"
 alias qq="exit"
 alias obsidian="flatpak run md.obsidian.Obsidian"
+alias brp="bazel run -- --env=prod --local-secrets-file=/home/pallav/.ssh/secrets.enc"
+alias brs="bazel run -- --local-secrets-file=/home/pallav/.ssh/secrets.enc"
 
 # paths
 set PATH "$PATH:/home/parth/flutterSDK/bin"
@@ -29,6 +31,8 @@ set -x EDITOR "/usr/bin/nvim"
 # go and bazel related stuff
 set -x USE_BAZEL_VERSION 6.4.0
 set -x JAVA_HOME /usr/lib/jvm/jre-21-openjdk
+
+set -x MISTRAL_API_KEY "xF6uPxmIqhNvbuw34VozdAh6EGqp4tsI"
 
 # The following snippet is meant to be used like this in your fish configuration:
 # if status is-interactive

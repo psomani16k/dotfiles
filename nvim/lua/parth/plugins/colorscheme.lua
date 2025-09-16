@@ -1,4 +1,4 @@
----- vs code
+-- vs code
 -- return {
 --   "Mofiqul/vscode.nvim",
 --   lazy = false,
