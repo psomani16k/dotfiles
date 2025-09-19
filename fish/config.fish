@@ -6,8 +6,7 @@ end
 alias rmrf="rm -rf"
 alias qq="exit"
 alias obsidian="flatpak run md.obsidian.Obsidian"
-alias brp="bazel run -- --env=prod --local-secrets-file=/home/pallav/.ssh/secrets.enc"
-alias brs="bazel run -- --local-secrets-file=/home/pallav/.ssh/secrets.enc"
+alias clear="echo 'Please use CTRL+L'"
 
 # paths
 set PATH "$PATH:/home/parth/flutterSDK/bin"

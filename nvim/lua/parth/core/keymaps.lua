@@ -35,9 +35,9 @@ vim.api.nvim_set_keymap('v', '<C-/>', "gc", { noremap = false, silent = false })
 keymap.set("n", "<leader>ww", "<cmd>WhichKey<cr>", { desc = "Show available keymaps" })
 
 -- git stuff
-keymap.set("n", "<leader>gp", "<cmd>:Gitsigns preview_hunk_inline<cr>", { desc = "Show available keymaps" })
-keymap.set("n", "<leader>grr", "<cmd>:Gitsigns reset_hunk<cr>", { desc = "Show available keymaps" })
-keymap.set("n", "<leader>gt", "<cmd>:Gitsigns toggle_current_line_blame<cr>", { desc = "Show available keymaps" })
+keymap.set("n", "<leader>gp", "<cmd>:Gitsigns preview_hunk<cr>", { desc = "Preview Git Changes" })
+keymap.set("n", "<leader>grr", "<cmd>:Gitsigns reset_hunk<cr>", { desc = "Reset Change" })
+keymap.set("n", "<leader>gt", "<cmd>:Gitsigns toggle_current_line_blame<cr>", { desc = "Toggle Line Blame" })
 
 -- telescopy
 keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
