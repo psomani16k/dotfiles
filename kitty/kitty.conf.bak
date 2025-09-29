@@ -1,8 +1,8 @@
 # ========== Window ==========
-background_opacity 0.6
+background_opacity 1
 # background_blur is available only if Kitty was built with that feature.
 # If you get errors, just comment this out.
-background_blur 1
+background_blur 0
 
 window_padding_width 0
 window_margin_width 0
@@ -39,3 +39,16 @@ map ctrl+alt+v paste_from_clipboard
 
 # ========== Shell ==========
 shell /bin/fish
+
+
+# BEGIN_KITTY_THEME
+# Gruvbox Dark Hard
+include current-theme.conf
+# END_KITTY_THEME
+
+# black background
+# background #000000
+
+input_delay 0
+sync_to_monitor yes
+wayland_enable_ime no
