@@ -31,8 +31,6 @@ set -x EDITOR "/usr/bin/nvim"
 set -x USE_BAZEL_VERSION 6.4.0
 set -x JAVA_HOME /usr/lib/jvm/jre-21-openjdk
 
-set -x MISTRAL_API_KEY "xF6uPxmIqhNvbuw34VozdAh6EGqp4tsI"
-
 # The following snippet is meant to be used like this in your fish configuration:
 # if status is-interactive
 #     # Maybe set ZELLIJ_AUTO_ATTACH / ZELLIJ_AUTO_EXIT
