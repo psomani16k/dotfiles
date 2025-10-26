@@ -1,33 +1,33 @@
 -- -- vs code
--- return {
---   "Mofiqul/vscode.nvim",
---   lazy = false,
---   priority = 1000,
---   config = function()
---     require('vscode').setup({
---       transparent = false
---     })
---     vim.cmd("colorscheme vscode")
---   end
--- }
-
----- tokyonight
 return {
-  "folke/tokyonight.nvim",
+  "Mofiqul/vscode.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("tokyonight").setup({
-      style = "night",
-      styles = {
-        comments = { italic = false },
-        keywords = { italic = false },
-      },
+    require('vscode').setup({
       transparent = false
     })
-    vim.cmd("colorscheme tokyonight")
+    vim.cmd("colorscheme vscode")
   end
 }
+
+---- tokyonight
+-- return {
+--   "folke/tokyonight.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     require("tokyonight").setup({
+--       style = "night",
+--       styles = {
+--         comments = { italic = false },
+--         keywords = { italic = false },
+--       },
+--       transparent = false
+--     })
+--     vim.cmd("colorscheme tokyonight")
+--   end
+-- }
 
 ---- gruvbox
 -- return {
