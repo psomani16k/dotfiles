@@ -52,12 +52,10 @@ keymap.set("n", "<leader>ee", ":Ex<CR>", { desc = "Switch to NetRW" })
 keymap.set("n", "<leader>lf", function() vim.lsp.buf.definition() end, { desc = "LSP definition" })
 keymap.set("n", "<leader>lh", function() vim.lsp.buf.hover({ border = "double" }) end, { desc = "LSP hover" })
 keymap.set("n", "<leader>lws", function() vim.lsp.buf.workspace_symbol() end, { desc = "LSP workspace symbol" })
-keymap.set("n", "<leader>lof", function() vim.diagnostic.open_float() end, { desc = "LSP open float" })
-keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, { desc = "LSP goto next" })
-keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, { desc = "LSP goto previous" })
 keymap.set("n", "<leader>.", function() vim.lsp.buf.code_action() end, { desc = "Show LSP powered code actions" })
 keymap.set("n", "<leader>lr", function() vim.lsp.buf.references() end, {})
 keymap.set("n", "<leader>ln", function() vim.lsp.buf.rename() end, { desc = "Rename" })
+keymap.set("n", "<leader>li", function() vim.lsp.buf.implementation() end, { desc = "Go To implementation" })
 keymap.set("n", "<leader>ii", function() require("conform").format({ async = true, lsp_fallback = true }) end,
   { desc = "Format using Formatter or LSP" })
 keymap.set("n", "<leader>ll", function() vim.lsp.buf.signature_help({ border = "double" }) end,
