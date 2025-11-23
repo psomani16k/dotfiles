@@ -19,23 +19,5 @@ return {
       ensure_installed = { "clangd", "lua_ls", "rust_analyzer", "gradle_ls", },
     }
 
-    -- LSP settings (for overriding per client)
-    -- require("lspconfig").lua_ls.setup {}
-    -- require("lspconfig").denols.setup {}
-    -- require("lspconfig").dartls.setup {}
-    -- require("lspconfig").rust_analyzer.setup {}
-    -- require("lspconfig").clangd.setup {}
-    -- require("lspconfig").markdown_oxide.setup {}
-    require('lspconfig').taplo.setup {}
-
-    local util = require 'lspconfig.util'
-    require('lspconfig').gopls.setup {
-      root_dir = util.root_pattern('.git'),
-      settings = {
-        gopls = {
-          completeUnimported = true,
-        }
-      }
-    }
   end
 }

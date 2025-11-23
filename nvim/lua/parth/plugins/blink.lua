@@ -1,5 +1,4 @@
-return
-{
+return {
   'saghen/blink.cmp',
   -- optional: provides snippets for the snippet source
   dependencies = 'rafamadriz/friendly-snippets',
@@ -18,14 +17,27 @@ return
     },
 
     appearance = {
-      use_nvim_cmp_as_default = true,
-      nerd_font_variant = 'mono'
+      -- use_nvim_cmp_as_default = true,
+      nerd_font_variant = 'mono',
+    },
+
+    completion = {
+      documentation = {
+        auto_show = true,
+        auto_show_delay_ms = 150,
+        window = {
+          border = "rounded", -- Noice will override content styling
+        },
+      },
+      menu = {
+        border = "rounded",
+      }
     },
 
     -- default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lsp', 'lazydev', 'path', 'snippets', 'buffer' },
       -- optionally disable cmdline completions
       -- cmdline = {},
     },

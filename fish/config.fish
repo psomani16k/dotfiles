@@ -12,7 +12,6 @@ alias clear="echo 'Please use CTRL+L'"
 set PATH "$PATH:/home/parth/flutterSDK/bin"
 set PATH "$PATH:/opt/android-studio/bin"
 set PATH "$PATH:/home/parth/flutter/bin"
-set PATH "$PATH:$(go env GOPATH)/bin"
 
 # starship
 starship init fish | source
