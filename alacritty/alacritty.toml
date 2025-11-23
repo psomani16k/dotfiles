@@ -44,4 +44,4 @@ action = "Paste"
 shell = { program = "/bin/fish" }
 
 [general]
-import = ["~/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"]
+import = ["~/.config/alacritty/dank-theme.toml"]
