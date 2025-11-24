@@ -45,4 +45,9 @@ diagnostic.config({
   update_in_insert = true,
 })
 
-opt.conceallevel = 2
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "/home/parth/obsidian/*",
+  callback = function()
+    vim.opt.conceallevel = 2
+  end,
+})
