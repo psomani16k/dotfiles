@@ -113,7 +113,7 @@ input {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
   // Set gaps around windows in logical pixels.
-  gaps 5
+  gaps 2
 
   // When to center a column when changing focus, options are:
   // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -140,7 +140,7 @@ layout {
   // preset-window-heights { }
 
   // You can change the default width of the new windows.
-  default-column-width { proportion 0.5; }
+  default-column-width { proportion 1.0; }
   // If you leave the brackets empty, the windows themselves will decide their initial width.
   // default-column-width {}
 
@@ -286,7 +286,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -304,7 +304,7 @@ animations {
   // off
 
   // Slow down all animations by this factor. Values below 1 speed them up instead.
-  // slowdown 3.0
+  slowdown 1.5
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -313,7 +313,7 @@ animations {
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
-window-rule {
+/-window-rule {
   // This regular expression is intentionally made as specific as possible,
   // since this is the default config, and we want no false positives.
   // You can get away with just app-id="wezterm" if you want.
@@ -321,10 +321,10 @@ window-rule {
   default-column-width {}
 }
 
-// Dim unfocused windows by setting their opacity to 90% (0.9)
+// make unfocused windows semitransparent by setting their opacity to 90% (0.9)
 window-rule {
   match is-active=false
-  opacity 0.95
+  opacity 0.90
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -372,13 +372,13 @@ binds {
 
   // Suggested binds for running programs: terminal, app launcher, screen locker.
   Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-  Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+  Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
   Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
   // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
   // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
   // For example, this is a standard bind to toggle the screen reader (orca).
-  Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+  /- Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
   // Example volume keys mappings for PipeWire & WirePlumber.
   // The allow-when-locked=true property makes them work even when the session is locked.
@@ -620,5 +620,5 @@ binds {
 
   // Powers off the monitors. To turn them back on, do any input like
   // moving the mouse or pressing any other key.
-  Mod+Shift+P { power-off-monitors; }
+    Mod+Shift+P { power-off-monitors; }
 }
