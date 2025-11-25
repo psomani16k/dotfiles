@@ -15,3 +15,7 @@ source ~/.config/zellij/setup.sh
 
 # Setup neovim
 source ~/.config/nvim/setup.sh
+
+# Setup starship
+
+# Setup dms

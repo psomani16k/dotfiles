@@ -6,5 +6,5 @@ curl -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable
 
 # Installing cargo binstall
 echo -e "\033[1;32m|=== INSTALLING CARGO BINSTALL ==="
-cargo inatall cargo-binstall
+cargo install cargo-binstall
 
