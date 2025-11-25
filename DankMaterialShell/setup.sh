@@ -11,7 +11,7 @@ echo -e "\033[1;32m|=== INSTALLING AND SETTINGUP DANK GREETER ===|\033[0m"
 sudo dnf copr enable avengemedia/danklinux -y
 sudo dnf install dms-greeter -y
 dms greeter enable
-dms greeter sync
+echo "y" | dms greeter sync
 sudo systemctl disable gdm lightdm sddm
 sudo systemctl enable greetd
 echo ""
