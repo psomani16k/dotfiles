@@ -3,5 +3,5 @@
 # Installing niri
 echo -e "\033[1;32m|=== INSTALLING AND SETTING UP NIRI ===|\033[0m"
 sudo dnf install niri -y
-system --user add-wants niri.service
+sudo systemctl --user add-wants niri.service dms
 echo ""
