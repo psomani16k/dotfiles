@@ -16,6 +16,8 @@ source ~/.config/zellij/setup.sh
 # Setup neovim
 source ~/.config/nvim/setup.sh
 
-# Setup starship
+# Setup starship - put this here as no dedicated starship folder
+echo -e "\033[1;32m|=== INSTALLING STARSHIP ===|\033[0m"
+cargo binstall starship -y
 
 # Setup dms
