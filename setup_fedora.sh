@@ -21,3 +21,13 @@ echo -e "\033[1;32m|=== INSTALLING STARSHIP ===|\033[0m"
 cargo binstall starship -y
 
 # Setup dms
+source ~/.config/DankMaterialShell/setup.sh
+
+# Setup danksearch
+source ~/.config/danksearch/setup.sh
+
+# Setup niri
+source ~/.config/niri/setup.sh
+
+reboot
+
