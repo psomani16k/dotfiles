@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Install rust
+echo -e "\033[1;32m|=== INSTALLING THE RUST TOOLCHAIN ===|\033[0m"
+curl -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable
+
+# Installing cargo binstall
+echo -e "\033[1;32m|=== INSTALLING CARGO BINSTALL ==="
+cargo inatall cargo-binstall
+

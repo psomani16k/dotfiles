@@ -58,11 +58,6 @@ keymap.set("n", "<leader>ln", function() vim.lsp.buf.rename() end, { desc = "Ren
 keymap.set("n", "<leader>li", function() vim.lsp.buf.implementation() end, { desc = "Go To implementation" })
 keymap.set("n", "<leader>ii", function()
   local didFormat = require("conform").format({ async = false, lsp_fallback = true })
-  print(tostring(didFormat))
-  if not didFormat then
-    -- Keystrokes to simulate: Ctrl + =
-    vim.cmd('normal!ggGV')
-  end
 end, { desc = "Format using Formatter or LSP" })
 keymap.set("n", "<leader>ll", function() vim.lsp.buf.signature_help({ border = "double" }) end,
   { desc = "Signature Help" })

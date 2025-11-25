@@ -2,7 +2,7 @@
 
 # start terminal 
 
-kitty &
+alacritty &
 
 # start chrome
 
