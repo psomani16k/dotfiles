@@ -19,6 +19,7 @@ source ~/.config/nvim/setup.sh
 # Setup starship - put this here as no dedicated starship folder
 echo -e "\033[1;32m|=== INSTALLING STARSHIP ===|\033[0m"
 cargo binstall starship -y
+echo ""
 
 # Setup dms
 source ~/.config/DankMaterialShell/setup.sh
