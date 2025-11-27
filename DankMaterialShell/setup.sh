@@ -12,7 +12,7 @@ sudo dnf copr enable avengemedia/danklinux -y
 sudo dnf install dms-greeter -y
 dms greeter enable
 echo "y" | dms greeter sync
-sudo systemctl disable gdm lightdm sddm
+sudo systemctl disable gdm
 sudo systemctl enable greetd
 echo ""
 
