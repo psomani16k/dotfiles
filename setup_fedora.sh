@@ -30,5 +30,3 @@ source ~/.config/danksearch/setup.sh
 # Setup niri
 source ~/.config/niri/setup.sh
 
-reboot
-
