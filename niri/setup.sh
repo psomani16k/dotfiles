@@ -10,9 +10,11 @@ cd ~/temp
 git clone https://github.com/YaLTeR/niri.git
 cd niri
 cargo build --release
-sudo mv ~/temp/niri/target/release/niri /usr/bin
-sudo mv ~/temp/niri/resources/niri-session /usr/bin
-sudo mc ~/temp/niri/resources/niri.service /etc/dinit.d/usr
+sudo install -Dm644 -t /usr/lib/systemd/user ./resources/niri-shutdown.target
+sudo install -Dm644 -t /usr/lib/systemd/user ./resources/niri.service
+sudo install -Dm644 -t /usr/share/xdg-desktop-portal ./resources/niri-portals.conf
+sudo install -Dm644 -t /usr/share/wayland-sessions ./resources/niri.desktop
+sudo install -Dm755 -t /usr/bin ./resources/niri-session
 # rm -rf ~/temp
 
 # Installing from package manager
