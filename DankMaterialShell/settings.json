@@ -89,6 +89,11 @@
       "id": "battery",
       "enabled": true,
       "width": 50
+    },
+    {
+      "id": "colorPicker",
+      "enabled": true,
+      "width": 50
     }
   ],
   "showWorkspaceIndex": false,
@@ -139,7 +144,7 @@
   "weatherEnabled": true,
   "networkPreference": "wifi",
   "vpnLastConnected": "",
-  "iconTheme": "breeze",
+  "iconTheme": "System Default",
   "launcherLogoMode": "apps",
   "launcherLogoCustomPath": "",
   "launcherLogoColorOverride": "",
