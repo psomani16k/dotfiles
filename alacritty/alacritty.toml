@@ -23,7 +23,7 @@ shape = "Beam"
 blinking = "Never"
 
 [colors.primary]
-# background = "#000000"
+background = "#000000"
 
 [[keyboard.bindings]]
 key = "F"
