@@ -8,7 +8,7 @@ binds {
   }
 
   Mod+P hotkey-overlay-title="Toggle Bottom Bar" {
-    spawn "dms" "ipc" "call" "bar" "toggle"
+    spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"
   }
 
   // Quick launch programs
