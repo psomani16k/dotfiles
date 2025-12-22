@@ -308,4 +308,4 @@ window-rule {
 include "binds.kdl"
 include "./dms/colors.kdl"
 include "./dms/alttab.kdl"
-
+include "./output.kdl"
