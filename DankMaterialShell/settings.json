@@ -243,7 +243,6 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "launcherButton",
         "workspaceSwitcher",
         "focusedWindow"
       ],
@@ -253,17 +252,19 @@
         "weather"
       ],
       "rightWidgets": [
-        "systemTray",
-        "clipboard",
         "cpuUsage",
         "memUsage",
         "notificationButton",
         "battery",
-        "controlCenterButton"
+        "controlCenterButton",
+        {
+          "id": "network_speed_monitor",
+          "enabled": true
+        }
       ],
-      "spacing": 4,
+      "spacing": 2,
       "innerPadding": 4,
-      "bottomGap": 0,
+      "bottomGap": -1,
       "transparency": 1,
       "widgetTransparency": 1,
       "squareCorners": false,
@@ -272,14 +273,14 @@
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
       "borderEnabled": false,
-      "borderColor": "surfaceText",
+      "borderColor": "primary",
       "borderOpacity": 1,
       "borderThickness": 1,
       "widgetOutlineEnabled": false,
       "widgetOutlineColor": "primary",
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
-      "fontScale": 1,
+      "fontScale": 1.15,
       "autoHide": false,
       "autoHideDelay": 250,
       "openOnOverview": false,
