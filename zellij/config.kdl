@@ -11,7 +11,7 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Ctrl ;" { SwitchToMode "pane"; }
         bind "Ctrl '" { SwitchToMode "tab"; }
-        bind "Ctrl s" { SwitchToMode "entersearch"; }
+        bind "Ctrl Shift s" { SwitchToMode "entersearch"; }
 
         // actions
         bind "Alt Shift h" { MoveFocus "Left"; }
@@ -291,3 +291,5 @@ show_startup_tips false
 // Default: true
 // 
 // show_release_notes false
+
+hide_key_hints true

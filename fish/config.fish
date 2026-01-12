@@ -20,6 +20,8 @@ starship init fish | source
 # cargo bins
 source ~/.cargo/env.fish
 
+source ~/.ssh/api_keys.fish
+
 # android build caching
 set -x USE_CCACHE 1
 set -x CCACHE_EXEC "/usr/bin/ccache"

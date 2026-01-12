@@ -123,7 +123,7 @@
   "weatherEnabled": true,
   "networkPreference": "wifi",
   "vpnLastConnected": "",
-  "iconTheme": "System Default",
+  "iconTheme": "Adwaita",
   "launcherLogoMode": "apps",
   "launcherLogoCustomPath": "",
   "launcherLogoColorOverride": "",
@@ -132,7 +132,7 @@
   "launcherLogoContrast": 1,
   "launcherLogoSizeOffset": 0,
   "fontFamily": "Inter Variable",
-  "monoFontFamily": "Fira Code",
+  "monoFontFamily": "CaskaydiaCove Nerd Font Mono",
   "fontWeight": 400,
   "fontScale": 1,
   "notepadUseMonospace": true,
@@ -163,7 +163,7 @@
   "launchPrefix": "",
   "brightnessDevicePins": {},
   "wifiNetworkPins": {
-    "preferredWifi": "MIDFORD"
+    "preferredWifi": "Parth"
   },
   "bluetoothDevicePins": {},
   "audioInputDevicePins": {},
@@ -229,7 +229,7 @@
   "updaterUseCustomCommand": false,
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
-  "displayNameMode": "system",
+  "displayNameMode": "model",
   "screenPreferences": {},
   "showOnLastDisplay": {},
   "barConfigs": [
