@@ -56,20 +56,16 @@ keymap.set("n", "<leader>.", function() vim.lsp.buf.code_action() end, { desc = 
 keymap.set("n", "<leader>lr", function() vim.lsp.buf.references() end, {})
 keymap.set("n", "<leader>ln", function() vim.lsp.buf.rename() end, { desc = "Rename" })
 keymap.set("n", "<leader>li", function() vim.lsp.buf.implementation() end, { desc = "Go To implementation" })
-keymap.set("n", "<leader>ii", function()
-  local didFormat = require("conform").format({ async = false, lsp_fallback = true })
-end, { desc = "Format using Formatter or LSP" })
+keymap.set("n", "<leader>ii", function() require("conform").format({ async = false, lsp_fallback = true }) end,
+  { desc = "Format using Formatter or LSP" })
 keymap.set("n", "<leader>ll", function() vim.lsp.buf.signature_help({ border = "double" }) end,
   { desc = "Signature Help" })
 keymap.set("n", "<leader>er", function() vim.diagnostic.open_float({ border = "double" }) end,
   { desc = "Show the error message" })
 
--- flutter bloc
-keymap.set("n", "<leader>cfb", function() require("flutter-bloc").create_bloc() end,
-  { desc = '[C]reate [F]lutter [B]loc' })
-keymap.set("n", "<leader>cfc", function() require("flutter-bloc").create_cubit() end,
-  { desc = '[C]reate [F]lutter [C]ubit' })
-
 -- csv
 keymap.set("n", "<leader>cv", "<cmd>CsvViewToggle delimiter=, quote_char=' comment=# display_mode=border <CR>",
   { desc = 'Toggle csv view' })
+
+-- ai
+keymap.set("n", "<leader>cc", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "Toggle AI chat window." })
