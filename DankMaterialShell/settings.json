@@ -341,6 +341,13 @@
   "niriOutputSettings": {
     "Chimei Innolux Corporation 0x1540 Unknown": {
       "vrrOnDemand": true
+    },
+    "eDP-1": {
+      "vrrOnDemand": true,
+      "disabled": false,
+      "layout": {
+        "alwaysCenterSingleColumn": true
+      }
     }
   },
   "hyprlandOutputSettings": {},
@@ -396,7 +403,7 @@
       "autoHide": false,
       "autoHideDelay": 250,
       "openOnOverview": false,
-      "visible": true,
+      "visible": false,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
       "maximizeDetection": true
