@@ -22,4 +22,4 @@ vim.opt.rtp:prepend(lazypath)
 -- setting up lazy.nvim
 -- --------------------
 
-require("lazy").setup({ spec = "parth.plugins", change_detection = { notify = false }})
+require("lazy").setup({ spec = "plugins", change_detection = { notify = false }})
