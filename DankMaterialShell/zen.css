@@ -1,39 +1,39 @@
 /* DMS Matugen Zen Browser Theme */
 :root {
-  --zen-primary-color: #384379 !important;
+  --zen-primary-color: #0032c3 !important;
   --toolbarbutton-icon-fill: #b9c3ff !important;
-  --toolbar-field-color: #e3e1e9 !important;
+  --toolbar-field-color: #e2e1ef !important;
   --tab-selected-textcolor: #b9c3ff !important;
-  --toolbar-color: #e3e1e9 !important;
-  --arrowpanel-color: #e3e1e9 !important;
-  --arrowpanel-background: #1f1f25 !important;
-  --sidebar-text-color: #e3e1e9 !important;
-/*  --zen-main-browser-background: #121318 !important; */
+  --toolbar-color: #e2e1ef !important;
+  --arrowpanel-color: #e2e1ef !important;
+  --arrowpanel-background: #1d1f29 !important;
+  --sidebar-text-color: #e2e1ef !important;
+/*  --zen-main-browser-background: #11131c !important; */
 }
 
 .sidebar-placesTree {
-  background-color: #1f1f25 !important;
+  background-color: #1d1f29 !important;
 }
 
 #zen-workspaces-button {
-  background-color: #1f1f25 !important;
+  background-color: #1d1f29 !important;
 }
 
 #TabsToolbar {
-  background-color: #121318 !important;
+  background-color: #11131c !important;
 }
 
 .urlbar-background {
-  background-color: #1f1f25 !important;
+  background-color: #1d1f29 !important;
 }
 
 .urlbar-input::selection {
-  color: #212c61 !important;
+  color: #00218b !important;
   background-color: #b9c3ff !important;
 }
 
 .urlbarView-url {
-  color: #c6c5d0 !important;
+  color: #c6c5d3 !important;
 }
 
 toolbar .toolbarbutton-1 {
@@ -90,5 +90,5 @@ toolbar .toolbarbutton-1 {
 }
 
 #zen-appcontent-navbar-container {
-  background-color: #121318 !important;
+  background-color: #11131c !important;
 }

@@ -312,5 +312,3 @@ include "output.kdl"
 include "dms/outputs.kdl"
 
 include "dms/outputs.kdl"
-
-include "dms/cursor.kdl"
