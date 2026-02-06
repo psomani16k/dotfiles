@@ -1,5 +1,6 @@
 return { {
   'saghen/blink.cmp',
+  version = "1.*",
   dependencies = {
     'rafamadriz/friendly-snippets',
   },
@@ -65,7 +66,6 @@ return { {
   opts = {},
 }, {
   'saghen/blink.pairs',
-  version = '*', -- (recommended) only required with prebuilt binaries
 
   -- download prebuilt binaries from github releases
   dependencies = 'saghen/blink.download',
