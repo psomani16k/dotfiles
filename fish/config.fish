@@ -13,6 +13,13 @@ set PATH "$PATH:/home/parth/flutterSDK/bin"
 set PATH "$PATH:/opt/android-studio/bin"
 set PATH "$PATH:/home/parth/flutter/bin"
 set PATH "$PATH:/home/parth/bin"
+set PATH "$PATH:/opt/gradle/bin"
+
+# android
+set -x ANDROID_HOME "$HOME/Android/Sdk"
+set -x ANDROID_NDK_HOME "$ANDROID_HOME/ndk/27.3.13750724"
+set -x NDK_HOME "$ANDROID_NDK_HOME"
+set PATH "$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools"
 
 # starship
 starship init fish | source
@@ -31,7 +38,7 @@ set -x EDITOR "/usr/bin/nvim"
 
 # go and bazel related stuff
 set -x USE_BAZEL_VERSION 6.4.0
-set -x JAVA_HOME /usr/lib/jvm/jre-21-openjdk
+set -x JAVA_HOME /usr/lib/jvm/jre-25-openjdk
 
 # The following snippet is meant to be used like this in your fish configuration:
 # if status is-interactive

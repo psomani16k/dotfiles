@@ -8,7 +8,11 @@ return {
     },
     picker = {
       enabled = true,
-    }
-
+    },
+    bigfile = {
+      enable = true,
+      notify = true,
+      size = 10 * 1024 * 1024, -- 10MB
+    },
   }
 }

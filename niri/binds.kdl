@@ -8,7 +8,7 @@ binds {
   }
 
   // Toggle the bottom info bar
-  Mod+P hotkey-overlay-title="Toggle Bottom Bar" {
+  Mod+I hotkey-overlay-title="Toggle Bottom Bar" {
     spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"
   }
 
@@ -172,9 +172,9 @@ binds {
   // Mod+Space       { switch-layout "next"; }
   // Mod+Shift+Space { switch-layout "prev"; }
 
-  Print { screenshot; }
-  Ctrl+Print { screenshot-screen; }
-  Alt+Print { screenshot-window; }
+  Mod+P { screenshot; }
+  Mod+Ctrl+P { screenshot-screen; }
+  Mod+Alt+P { screenshot-window; }
 
   // Applications such as remote-desktop clients and software KVM switches may
   // request that niri stops processing the keyboard shortcuts defined here
