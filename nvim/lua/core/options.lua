@@ -46,7 +46,7 @@ diagnostic.config({
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "/home/parth/obsidian/*",
+  pattern = "~/obsidian/*",
   callback = function()
     vim.opt.conceallevel = 2
   end,
