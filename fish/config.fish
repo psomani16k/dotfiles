@@ -14,6 +14,8 @@ set PATH "$PATH:/opt/android-studio/bin"
 set PATH "$PATH:/home/parth/flutter/bin"
 set PATH "$PATH:/home/parth/bin"
 set PATH "$PATH:/opt/gradle/bin"
+set PATH "$PATH:/home/parth/flutter/bin"
+set PATH "$PATH:/home/parth/.bun/bin"
 
 # android
 set -x ANDROID_HOME "$HOME/Android/Sdk"

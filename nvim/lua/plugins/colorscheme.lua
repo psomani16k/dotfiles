@@ -23,7 +23,7 @@ return {
         comments = { italic = false },
         keywords = { italic = false },
       },
-      transparent = false
+      transparent = true
     })
     vim.cmd("colorscheme tokyonight")
   end
