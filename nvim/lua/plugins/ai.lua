@@ -19,26 +19,26 @@ return {
         },
         adapter = {
           name = "gemini",
-          model = "gemini-2.5-flash"
+          model = "gemini-3-flash-preview"
         },
       },
       inline = {
         adapter = {
           name = "gemini",
-          model = "gemini-2.5-flash"
+          model = "gemini-3-flash-preview"
         }
       },
       close_on_cancel = false, -- Do not close the chat buffer when pressing Ctrl+c (e.g., with Ctrl-C)
       cmd = {
         adapter = {
           name = "gemini",
-          model = "gemini-2.5-flash"
+          model = "gemini-3-flash-preview"
         }
       },
       background = {
         adapter = {
           name = "gemini",
-          model = "gemini-2.5-flash"
+          model = "gemini-3-flash-preview"
         }
       },
     },

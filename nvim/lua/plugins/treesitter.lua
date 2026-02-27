@@ -11,12 +11,25 @@ return {
     treesitter.setup({
       -- enable syntax highlighting
 
+      install_dir = vim.fn.stdpath("data") .. "/site/parsers",
+
+      ensure_installed = {
+        "markdown",
+        "markdown_inline", -- REQUIRED for fenced code blocks
+        "rust",
+        "python",
+        "lua",
+        "bash",
+        "json",
+      },
+
       highlight = {
         enable = true,
       },
 
       -- enable indentation
       indent = { enable = true, disable = { "dart" } },
+
 
       -- ensure these language parsers are installed
       auto_install = true,

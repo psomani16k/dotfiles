@@ -39,21 +39,32 @@ keymap.set("n", "<leader>gp", "<cmd>:Gitsigns preview_hunk<cr>", { desc = "Previ
 keymap.set("n", "<leader>grr", "<cmd>:Gitsigns reset_hunk<cr>", { desc = "Reset Change" })
 keymap.set("n", "<leader>gt", "<cmd>:Gitsigns toggle_current_line_blame<cr>", { desc = "Toggle Line Blame" })
 
--- telescopy
-keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-keymap.set("n", "<leader>tr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-keymap.set("n", "<leader>ts", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-keymap.set("n", "<leader>tf", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+-- telescope
+keymap.set("n", "<leader>f", function() require("telescope.builtin").find_files {} end,
+  { desc = "Fuzzy find files in cwd" })
+keymap.set("n", "<leader>tr", function() require("telescope.builtin").oldfiles {} end,
+  { desc = "Fuzzy find recent files" })
+keymap.set("n", "<leader>ts",
+  function() require("plugins.telescope_custom.live_grep_with_options").live_grep_with_options {} end,
+  { desc = "Find string in cwd" })
+keymap.set("n", "<leader>tf", function() require("telescope.builtin").grep_string {} end,
+  { desc = "Find string under cursor in cwd" })
+keymap.set("n", "<leader>gc", function() require("telescope.builtin").git_bcommits {} end,
+  { desc = "Search through the commit history of the current buffer" })
 
 -- files
 keymap.set("n", "<leader>ee", ":Ex<CR>", { desc = "Switch to NetRW" })
 
 -- LSP
-keymap.set("n", "<leader>lf", function() vim.lsp.buf.definition() end, { desc = "LSP definition" })
+keymap.set("n", "<leader>lf", function()
+  require("telescope.builtin").lsp_definitions {}
+end, { desc = "LSP definition" })
 keymap.set("n", "<leader>lh", function() vim.lsp.buf.hover({ border = "double" }) end, { desc = "LSP hover" })
 keymap.set("n", "<leader>lws", function() vim.lsp.buf.workspace_symbol() end, { desc = "LSP workspace symbol" })
 keymap.set("n", "<leader>.", function() vim.lsp.buf.code_action() end, { desc = "Show LSP powered code actions" })
-keymap.set("n", "<leader>lr", function() vim.lsp.buf.references() end, {})
+keymap.set("n", "<leader>lr", function()
+  require("telescope.builtin").lsp_references {}
+end, { desc = "LSP powered references" })
 keymap.set("n", "<leader>ln", function() vim.lsp.buf.rename() end, { desc = "Rename" })
 keymap.set("n", "<leader>li", function() vim.lsp.buf.implementation() end, { desc = "Go To implementation" })
 keymap.set("n", "<leader>ii", function() require("conform").format({ async = false, lsp_fallback = true }) end,
