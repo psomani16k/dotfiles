@@ -5,7 +5,7 @@ local finders               = require("telescope.finders")
 local make_entry            = require("telescope.make_entry")
 local conf                  = require("telescope.config").values
 
-local live_grep_with_options = function(opts)
+M.live_grep_with_options = function(opts)
   opts = opts or {}
   opts.cwd = opts.cwd or vim.uv.cwd()
   local finder = finders.new_async_job {
@@ -50,10 +50,8 @@ local live_grep_with_options = function(opts)
   }):find()
 end
 
-M.setup                     = function()
-  -- live_grep_with_optins()
-end
-
-live_grep_with_options()
+-- M.setup                     = function()
+--   -- live_grep_with_optins()
+-- end
 
 return M

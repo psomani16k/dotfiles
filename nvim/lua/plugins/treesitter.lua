@@ -1,11 +1,12 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = "master",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
 
   config = function()
     -- import nvim-treesitter plugin
-    local treesitter = require("nvim-treesitter.config")
+    local treesitter = require("nvim-treesitter.configs")
 
     -- configure treesitter
     treesitter.setup({
@@ -21,6 +22,14 @@ return {
         "lua",
         "bash",
         "json",
+        "go",
+        "c",
+        "cpp",
+        "java",
+        "javascript",
+        "typescript",
+        "dart",
+        "proto",
       },
 
       highlight = {

@@ -21,6 +21,8 @@ return { {
       nerd_font_variant = 'mono',
     },
 
+    fuzzy = { implementation = "prefer_rust" },
+
     completion = {
       documentation = {
         auto_show = true,
