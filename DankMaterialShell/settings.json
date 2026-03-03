@@ -399,7 +399,6 @@
       "vrrOnDemand": true
     },
     "eDP-1": {
-      "vrrOnDemand": true,
       "disabled": false,
       "layout": {
         "alwaysCenterSingleColumn": true
@@ -464,7 +463,7 @@
       "autoHide": false,
       "autoHideDelay": 250,
       "openOnOverview": false,
-      "visible": false,
+      "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
       "maximizeDetection": true
