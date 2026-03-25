@@ -20,8 +20,6 @@ return {
         "clangd",
         "lua_ls",
         "rust_analyzer",
-        "gradle_ls",
-        "gopls",
         "taplo",
       },
     }

@@ -2,7 +2,7 @@ return { {
   'saghen/blink.cmp',
   version = "1.*",
   dependencies = {
-    'rafamadriz/friendly-snippets',
+    -- 'rafamadriz/friendly-snippets',
   },
   -- use a release tag to download pre-built binaries
   opts = {
@@ -41,10 +41,61 @@ return { {
     sources = {
       default = {
         'lsp',
-        'lazydev',
+        -- 'lazydev',
         'path',
-        'snippets',
+        -- 'snippets',
         'buffer',
+      },
+      providers = {
+        lazydev = {
+          name = "LazyDev",
+          module = "lazydev.integrations.blink",
+          -- make lazydev completions top priority (see `:h blink.cmp`)
+          score_offset = 100,
+        },
+        lsp = {
+          score_offset = 800, -- base LSP preference
+
+          -- Made chatgpt reflect vscodes behaviour here
+          kind_scores = {
+            ---TOP PRIORITY (context-correct)
+            Field         = 2400, --sruct literal fields always win
+            Property      = 2200,
+
+            ---HIGH (useful symbols)
+            Variable      = 600,
+            Constant      = 600,
+            TypeParameter = 500,
+
+            ---MEDIUM
+            Method        = 400,
+            Function      = 350,
+            Struct        = 300,
+            Interface     = 300,
+            TypeAlias     = 300,
+
+            ---LOW / NEUTRAL
+            Snippet       = 0,
+            Keyword       = -100,
+            Operator      = -200,
+
+            ---STRONGLY DISCOURAGED (VS Code hides these unless needed)
+            Module        = -6000,
+            Package       = -6000,
+            Text          = -7000,
+            File          = -7000,
+            Folder        = -7000,
+
+            ---Effectively hidden
+            Reference     = -8000,
+            Event         = -8000,
+            Color         = -8000,
+            Unit          = -8000,
+            Value         = -8000,
+            Enum          = -8000,
+            EnumMember    = -8000,
+          }
+        },
       },
       per_filetype = {
         codecompanion = { "codecompanion" },

@@ -403,6 +403,12 @@
       "layout": {
         "alwaysCenterSingleColumn": true
       }
+    },
+    "HDMI-A-1": {
+      "focusAtStartup": true,
+      "layout": {
+        "alwaysCenterSingleColumn": true
+      }
     }
   },
   "hyprlandOutputSettings": {},
