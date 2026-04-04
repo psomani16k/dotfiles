@@ -66,7 +66,9 @@ keymap.set("n", "<leader>lr", function()
   require("telescope.builtin").lsp_references {}
 end, { desc = "LSP powered references" })
 keymap.set("n", "<leader>ln", function() vim.lsp.buf.rename() end, { desc = "Rename" })
-keymap.set("n", "<leader>li", function() vim.lsp.buf.implementation() end, { desc = "Go To implementation" })
+keymap.set("n", "<leader>li", function()
+  require("telescope.builtin").lsp_implementations {}
+end, { desc = "Go To implementation" })
 keymap.set("n", "<leader>ii", function() require("conform").format({ async = false, lsp_fallback = true }) end,
   { desc = "Format using Formatter or LSP" })
 keymap.set("n", "<leader>ll", function() vim.lsp.buf.signature_help({ border = "double" }) end,
@@ -78,5 +80,5 @@ keymap.set("n", "<leader>er", function() vim.diagnostic.open_float({ border = "d
 keymap.set("n", "<leader>cv", "<cmd>CsvViewToggle delimiter=, quote_char=' comment=# display_mode=border <CR>",
   { desc = 'Toggle csv view' })
 
--- ai
+-- ai/claude
 keymap.set("n", "<leader>cc", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "Toggle AI chat window." })

@@ -7,6 +7,17 @@ return {
     "ravitemer/mcphub.nvim",
   },
   opts = {
+    adapters = {
+      acp = {
+        claude_code = function()
+          return require("codecompanion.adapters").extend("claude_code", {
+            env = {
+              CLAUDE_CODE_OAUTH_TOKEN = "CLAUDE_CODE_OAUTH_TOKEN",
+            },
+          })
+        end,
+      },
+    },
     interactions = {
       chat = {
         keymaps = {
@@ -18,27 +29,27 @@ return {
           },
         },
         adapter = {
-          name = "gemini",
+          name = "claude_code",
           model = "gemini-3-flash-preview"
         },
       },
       inline = {
         adapter = {
-          name = "gemini",
-          model = "gemini-3-flash-preview"
+          name = "claude_code",
+          model = "claude-haiku-4-5-20251001"
         }
       },
       close_on_cancel = false, -- Do not close the chat buffer when pressing Ctrl+c (e.g., with Ctrl-C)
       cmd = {
         adapter = {
-          name = "gemini",
-          model = "gemini-3-flash-preview"
+          name = "claude_code",
+          model = "claude-sonnet-4-5-20250929"
         }
       },
       background = {
         adapter = {
-          name = "gemini",
-          model = "gemini-3-flash-preview"
+          name = "claude_code",
+          model = "claude-sonnet-4-5-20250929"
         }
       },
     },

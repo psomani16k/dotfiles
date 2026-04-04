@@ -21,12 +21,21 @@ return { {
       nerd_font_variant = 'mono',
     },
 
-    fuzzy = { implementation = "prefer_rust" },
+    fuzzy = {
+      implementation = "lua",
+      sorts = { "sort_text", "exact", "score" },
+    },
 
     completion = {
+      list = {
+        selection = {
+          preselect = true, -- respect LSP's preselect hint
+          auto_insert = false,
+        },
+      },
       documentation = {
         auto_show = true,
-        auto_show_delay_ms = 150,
+        auto_show_delay_ms = 0,
         window = {
           border = "rounded", -- Noice will override content styling
         },
@@ -55,46 +64,6 @@ return { {
         },
         lsp = {
           score_offset = 800, -- base LSP preference
-
-          -- Made chatgpt reflect vscodes behaviour here
-          kind_scores = {
-            ---TOP PRIORITY (context-correct)
-            Field         = 2400, --sruct literal fields always win
-            Property      = 2200,
-
-            ---HIGH (useful symbols)
-            Variable      = 600,
-            Constant      = 600,
-            TypeParameter = 500,
-
-            ---MEDIUM
-            Method        = 400,
-            Function      = 350,
-            Struct        = 300,
-            Interface     = 300,
-            TypeAlias     = 300,
-
-            ---LOW / NEUTRAL
-            Snippet       = 0,
-            Keyword       = -100,
-            Operator      = -200,
-
-            ---STRONGLY DISCOURAGED (VS Code hides these unless needed)
-            Module        = -6000,
-            Package       = -6000,
-            Text          = -7000,
-            File          = -7000,
-            Folder        = -7000,
-
-            ---Effectively hidden
-            Reference     = -8000,
-            Event         = -8000,
-            Color         = -8000,
-            Unit          = -8000,
-            Value         = -8000,
-            Enum          = -8000,
-            EnumMember    = -8000,
-          }
         },
       },
       per_filetype = {
