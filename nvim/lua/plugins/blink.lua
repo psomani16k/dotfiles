@@ -23,8 +23,10 @@ return { {
 
     fuzzy = {
       implementation = "lua",
-      sorts = { "sort_text", "exact", "score" },
+      sorts = { "exact", "score", "sort_text" },
     },
+
+    snippets = { preset = 'default' },
 
     completion = {
       list = {
@@ -35,7 +37,7 @@ return { {
       },
       documentation = {
         auto_show = true,
-        auto_show_delay_ms = 0,
+        auto_show_delay_ms = 200,
         window = {
           border = "rounded", -- Noice will override content styling
         },
@@ -52,7 +54,7 @@ return { {
         'lsp',
         -- 'lazydev',
         'path',
-        -- 'snippets',
+        'snippets',
         'buffer',
       },
       providers = {
@@ -64,6 +66,10 @@ return { {
         },
         lsp = {
           score_offset = 800, -- base LSP preference
+        },
+        buffer = {
+          score_offset = -10,      -- keep buffer words well below LSP
+          min_keyword_length = 4,  -- only after typing 4+ chars
         },
       },
       per_filetype = {

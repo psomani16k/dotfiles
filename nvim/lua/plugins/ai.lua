@@ -30,28 +30,25 @@ return {
         },
         adapter = {
           name = "claude_code",
-          model = "gemini-3-flash-preview"
         },
       },
       inline = {
         adapter = {
           name = "claude_code",
-          model = "claude-haiku-4-5-20251001"
         }
       },
       close_on_cancel = false, -- Do not close the chat buffer when pressing Ctrl+c (e.g., with Ctrl-C)
       cmd = {
         adapter = {
           name = "claude_code",
-          model = "claude-sonnet-4-5-20250929"
         }
       },
       background = {
         adapter = {
           name = "claude_code",
-          model = "claude-sonnet-4-5-20250929"
         }
       },
     },
   },
 }
+

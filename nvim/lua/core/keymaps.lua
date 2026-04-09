@@ -54,6 +54,12 @@ keymap.set("n", "<leader>gc", function() require("telescope.builtin").git_bcommi
 
 -- files
 keymap.set("n", "<leader>ee", ":Ex<CR>", { desc = "Switch to NetRW" })
+keymap.set('n', '<leader>cp',
+  function()
+    vim.fn.setreg('+', vim.fn.expand('%'))
+    vim.notify('Copied: ' .. vim.fn.expand('%'))
+  end,
+  { desc = 'Copy relative filp path' })
 
 -- LSP
 keymap.set("n", "<leader>lf", function()
