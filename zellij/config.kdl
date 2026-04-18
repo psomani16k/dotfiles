@@ -111,6 +111,7 @@ load_plugins {
 // Default: default
 // 
 theme "tokyo-night"
+// theme "gruvbox"
  
 // Choose the base input mode of zellij.
 // Default: normal

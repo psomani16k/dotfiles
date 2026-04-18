@@ -1,0 +1,140 @@
+ls
+clear
+ls
+exit
+$nu.config-path
+qq
+exit
+ls
+qq
+exit
+cd ../nushell/
+ls
+nvim .
+exit
+ls
+exit
+ls
+cd
+ls
+cd Downloads/takeout-20260306T032219Z-3-001/
+l
+la
+ls
+cd `Takeout/Google Photos/Archive/`
+find
+find .
+ls
+cd ..
+ls
+find .
+find
+find .
+exit
+cd Projects/
+find .
+bash find .
+bash -c find .
+ls
+la
+ls
+exit
+ls
+find .
+rmrf temp
+rm -rf temp
+ls
+rm -rf hack
+ls
+find
+bash -c find .
+find .
+ls
+cd thesis
+ls
+cd e02122002
+cd env
+ls
+docker compose up -d
+find .
+ls
+cd ..
+find .
+which find
+find --help
+find --help | less
+ls
+cd data/bake/source/
+ls
+cd ns-3-dce/
+ls
+cat compile_commands.json
+cat compile_commands.json | from json
+cat compile_commands.json | from json | to yaml
+cat compile_commands.json | from json | to csv
+exit
+ls
+adb
+adb devices
+cd Projects/
+ls
+cd ..
+rm -rf Projects/
+ls
+cd projects/
+ls
+cd spectecle_/
+ls
+cd spectecle_mobile/
+flutter run
+qq
+exit
+flutter run --release
+ls
+lls
+ls
+nvim .
+cd ../..
+ls
+cd spectecle/
+ls
+npm run tauri android dev
+qq
+exit
+npm run tauri android dev
+npm run tauri dev android
+nvim .
+ls
+cd ../spectecle_/
+ls
+cd spectecle_desktop/
+ls
+cd ..
+fish
+ls
+cd ../temp/
+ls
+cd spectecle/
+ls
+qq
+exit
+npm run tauri dev android
+npm run tauri init android
+cargo tauri init andoir
+cargo tauri android init
+npm run tauri android dev
+exit
+bash -c npm run tauri android dev
+nvim .
+cd ../..
+rmrf temp
+cd
+cd .con
+cd .config/
+cd zellij/
+nvim .
+qq
+exit
+clear
+ls
+exit
