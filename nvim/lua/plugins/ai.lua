@@ -1,6 +1,5 @@
 return {
   "olimorris/codecompanion.nvim",
-  version = "^18.0.0",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
@@ -8,47 +7,30 @@ return {
   },
   opts = {
     adapters = {
-      acp = {
-        claude_code = function()
-          return require("codecompanion.adapters").extend("claude_code", {
-            env = {
-              CLAUDE_CODE_OAUTH_TOKEN = "CLAUDE_CODE_OAUTH_TOKEN",
-            },
-          })
-        end,
-      },
+      claude_code = function() -- ← moved up, removed `acp` nesting
+        return require("codecompanion.adapters").extend("claude_code", {
+          env = {
+            CLAUDE_CODE_OAUTH_TOKEN = "CLAUDE_CODE_OAUTH_TOKEN",
+          },
+          commands = {
+            default = { "claude-agent-acp" },
+            yolo = { "claude-agent-acp", "--yolo" },
+          },
+        })
+      end,
     },
     interactions = {
       chat = {
         keymaps = {
-          send = {
-            modes = { n = "<C-s>", i = "<C-s>" },
-          },
-          close = {
-            modes = { n = "<C-x>", i = "<C-x>" },
-          },
+          send = { modes = { n = "<C-s>", i = "<C-s>" } },
+          close = { modes = { n = "<C-x>", i = "<C-x>" } },
         },
-        adapter = {
-          name = "claude_code",
-        },
+        adapter = { name = "claude_code" },
       },
-      inline = {
-        adapter = {
-          name = "claude_code",
-        }
-      },
-      close_on_cancel = false, -- Do not close the chat buffer when pressing Ctrl+c (e.g., with Ctrl-C)
-      cmd = {
-        adapter = {
-          name = "claude_code",
-        }
-      },
-      background = {
-        adapter = {
-          name = "claude_code",
-        }
-      },
+      inline = { adapter = { name = "claude_code" } },
+      close_on_cancel = false,
+      cmd = { adapter = { name = "claude_code" } },
+      background = { adapter = { name = "claude_code" } },
     },
   },
 }
-

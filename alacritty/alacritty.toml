@@ -45,3 +45,8 @@ shell = { program = "/bin/fish" }
 
 [general]
 import = ["~/.config/alacritty/dank-theme.toml"]
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

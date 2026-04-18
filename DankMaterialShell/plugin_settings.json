@@ -1,0 +1,9 @@
+{
+  "claudeCodeUsage": {
+    "enabled": true,
+    "refreshInterval": 2
+  },
+  "dankNotepadModule": {
+    "enabled": true
+  }
+}

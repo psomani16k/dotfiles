@@ -233,7 +233,7 @@
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
   "launcherLogoSizeOffset": 0,
-  "fontFamily": "Comfortaa",
+  "fontFamily": "CaskaydiaCove NF",
   "monoFontFamily": "CaskaydiaCove Nerd Font Mono",
   "fontWeight": 400,
   "fontScale": 1,
@@ -248,18 +248,18 @@
   "soundNewNotification": true,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
-  "acMonitorTimeout": 0,
-  "acLockTimeout": 0,
-  "acSuspendTimeout": 0,
+  "acMonitorTimeout": 900,
+  "acLockTimeout": 600,
+  "acSuspendTimeout": 3600,
   "acSuspendBehavior": 0,
   "acProfileName": "",
   "batteryMonitorTimeout": 0,
   "batteryLockTimeout": 0,
   "batterySuspendTimeout": 0,
-  "batterySuspendBehavior": 0,
+  "batterySuspendBehavior": 1,
   "batteryProfileName": "",
   "batteryChargeLimit": 100,
-  "lockBeforeSuspend": false,
+  "lockBeforeSuspend": true,
   "loginctlLockIntegration": true,
   "fadeToLockEnabled": false,
   "fadeToLockGracePeriod": 5,
@@ -383,7 +383,7 @@
     "suspend",
     "restart"
   ],
-  "powerMenuDefaultAction": "logout",
+  "powerMenuDefaultAction": "suspend",
   "powerMenuGridLayout": false,
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
@@ -449,6 +449,10 @@
         {
           "id": "network_speed_monitor",
           "enabled": true
+        },
+        {
+          "id": "claudeCodeUsage",
+          "enabled": true
         }
       ],
       "spacing": 2,
@@ -473,7 +477,7 @@
       "autoHide": false,
       "autoHideDelay": 250,
       "openOnOverview": false,
-      "visible": true,
+      "visible": false,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
       "maximizeDetection": true
