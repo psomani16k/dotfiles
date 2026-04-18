@@ -54,45 +54,10 @@ binds {
   Mod+Shift+K { move-window-up-or-to-workspace-up; }
   Mod+Shift+L { move-column-right-or-to-monitor-right; }
 
-
-  // You can bind mouse wheel scroll ticks using the following syntax.
-  // These binds will change direction based on the natural-scroll setting.
-  //
-  // To avoid scrolling through workspaces really fast, you can use
-  // the cooldown-ms property. The bind will be rate-limited to this value.
-  // You can set a cooldown on any bind, but it's most useful for the wheel.
-  Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-  Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-  Mod+WheelScrollRight      { focus-column-right; }
-  Mod+WheelScrollLeft       { focus-column-left; }
-
-  // Similarly, you can bind touchpad scroll "ticks".
-  // Touchpad scrolling is continuous, so for these binds it is split into
-  // discrete intervals.
-  // These binds are also affected by touchpad's natural-scroll, so these
-  // example binds are "inverted", since we have natural-scroll enabled for
-  // touchpads by default.
-  // Mod+TouchpadScrollDown { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
-  // Mod+TouchpadScrollUp   { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
-
-  // You can refer to workspaces by index. However, keep in mind that
-  // niri is a dynamic workspace system, so these commands are kind of
-  // "best effort". Trying to refer to a workspace index bigger than
-  // the current workspace count will instead refer to the bottommost
-  // (empty) workspace.
-  //
-  // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
-  // will all refer to the 3rd workspace.
-
-  // Alternatively, there are commands to move just a single window:
-  // Mod+Ctrl+1 { move-window-to-workspace 1; }
-
-  // Switches focus between the current and the previous workspace.
-  // Mod+Tab { focus-workspace-previous; }
-
-  // The following binds move the focused window in and out of a column.
-  // If the window is alone, they will consume it into the nearby column to the side.
-  // If the window is already in a column, they will expel it out.
+  Mod+Ctrl+H { consume-or-expel-window-left;}
+  // Mod+Ctrl+J { }
+  // Mod+Ctrl+K { }
+  Mod+Ctrl+L { consume-or-expel-window-right;}
 
   Mod+R { switch-preset-column-width; }
   // Cycling through the presets in reverse order is also possible.
@@ -119,12 +84,8 @@ binds {
   // * adjust width as a percentage of screen width: "-10%" or "+10%"
   // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
   // set-column-width "100" will make the column occupy 200 physical screen pixels.
-  Mod+Minus { set-column-width "-10%"; }
-  Mod+Equal { set-column-width "+10%"; }
-
-  // Finer height adjustments when in column with other windows.
-  Mod+Shift+Minus { set-window-height "-10%"; }
-  Mod+Shift+Equal { set-window-height "+10%"; }
+  Mod+Shift+D { set-window-height "-10%"; }
+  Mod+Shift+F { set-window-height "+10%"; }
 
   // Move the focused window between the floating and the tiling layout.
   Mod+V       { toggle-window-floating; }

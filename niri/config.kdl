@@ -306,6 +306,7 @@ window-rule {
     clip-to-geometry true
 }
 include "binds.kdl"
+include "dms/binds.kdl"
 include "dms/colors.kdl"
 include "dms/alttab.kdl"
 include "dms/outputs.kdl"
