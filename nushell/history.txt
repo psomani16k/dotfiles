@@ -138,3 +138,9 @@ exit
 clear
 ls
 exit
+clear
+ls
+clear
+exit
+open downloaded-logs-20260420-172824.json | flatten
+exit

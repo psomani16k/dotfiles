@@ -7,6 +7,7 @@ alias rmrf="rm -rf"
 alias qq="exit"
 alias obsidian="flatpak run md.obsidian.Obsidian"
 alias clear="echo 'Please use CTRL+L'"
+alias laude="claude"
 
 # paths
 set PATH "$PATH:/home/parth/flutterSDK/bin"

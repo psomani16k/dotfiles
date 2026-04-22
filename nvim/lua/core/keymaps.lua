@@ -23,10 +23,6 @@ keymap.set("n", "<C-A-k>", "<cmd>resize +2<CR>", { silent = true, desc = "Increa
 keymap.set("n", "<C-A-r>", "<cmd>vsplit<CR>", { silent = true, desc = "Vertical split" })
 keymap.set("n", "<C-A-d>", "<cmd>split<CR>", { silent = true, desc = "Horizontal split" })
 
-
--- misc
-keymap.set("n", "<leader>cs", ":nohl<CR>", { desc = "Clear Search Highlights" })
-
 -- commenting lines
 vim.api.nvim_set_keymap('n', '<C-/>', 'gcc', { noremap = false, silent = false }) -- Toggle comment for current line
 vim.api.nvim_set_keymap('v', '<C-/>', "gc", { noremap = false, silent = false })  -- Toggle comment for selected lines
@@ -54,12 +50,40 @@ keymap.set("n", "<leader>gc", function() require("telescope.builtin").git_bcommi
 
 -- files
 keymap.set("n", "<leader>ee", ":Ex<CR>", { desc = "Switch to NetRW" })
-keymap.set('n', '<leader>cp',
-  function()
+keymap.set('n', '<leader>cp', function()
     vim.fn.setreg('+', vim.fn.expand('%'))
     vim.notify('Copied: ' .. vim.fn.expand('%'))
   end,
   { desc = 'Copy relative filp path' })
+keymap.set("n", "gx", function()
+  local path
+
+  if vim.bo.filetype == "netrw" then
+    local dir = vim.b.netrw_curdir or ""
+    local file = vim.fn.expand("<cfile>")
+    path = dir .. "/" .. file
+  else
+    path = vim.fn.fnamemodify(vim.fn.expand("<cfile>"), ":p")
+  end
+
+  if path == "" then
+    vim.notify("No file under cursor", vim.log.levels.WARN)
+    return
+  end
+
+  vim.fn.setreg("+", path)
+  vim.fn.jobstart({ "xdg-open", path }, {
+    detach = true,
+    on_stderr = function(_, data)
+      if data and data[1] ~= "" then
+        vim.schedule(function()
+          vim.notify("Error: " .. table.concat(data, "\n"), vim.log.levels.ERROR)
+        end)
+      end
+    end,
+  })
+  vim.notify("Opened: " .. path)
+end, { desc = "XDG-open file under cursor" })
 
 -- LSP
 keymap.set("n", "<leader>lf", function()
@@ -88,3 +112,6 @@ keymap.set("n", "<leader>cv", "<cmd>CsvViewToggle delimiter=, quote_char=' comme
 
 -- ai/claude
 keymap.set("n", "<leader>cc", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "Toggle AI chat window." })
+
+-- misc
+keymap.set("n", "<leader>cs", ":nohl<CR>", { desc = "Clear Search Highlights" })
