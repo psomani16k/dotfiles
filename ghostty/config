@@ -12,36 +12,12 @@ background = #000000
 
 # KEYBINDS
 
-# opening a new window
-keybind = ctrl+alt+d=new_split:down
-keybind = ctrl+alt+r=new_split:right
-keybind = ctrl+alt+e=new_split:left
-keybind = ctrl+alt+s=new_split:up
-
 # closing things
 keybind = ctrl+alt+q=close_surface
-
-# navigating splits
-keybind = alt+j=goto_split:bottom
-keybind = alt+h=goto_split:left
-keybind = alt+l=goto_split:right
-keybind = alt+k=goto_split:top
-
-# resizing splits
-keybind = ctrl+alt+j=resize_split:down,5
-keybind = ctrl+alt+l=resize_split:right,10
-keybind = ctrl+alt+h=resize_split:left,5
-keybind = ctrl+alt+k=resize_split:up,10
-
-# tabs
-keybind = ctrl+alt+shift+n=new_tab
-keybind = ctrl+alt+shift+l=next_tab
-keybind = ctrl+alt+shift+h=previous_tab
 
 # fullscreen
 keybind = ctrl+alt+f=toggle_fullscreen
 # keybind = ctrl+alt+d=toggle_window_decorations
 
-# copy paste
-keybind = ctrl+alt+c=copy_to_clipboard
-keybind = ctrl+alt+v=paste_from_clipboard
+# terminal
+command = /usr/bin/fish --login --interactive

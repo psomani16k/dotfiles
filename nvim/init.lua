@@ -1,2 +1,2 @@
-require("parth.core")
-require("parth.lazy")
+require("core")
+require("lazy_bootstrap")
