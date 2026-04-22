@@ -8,5 +8,5 @@ echo ""
 # Setting up CaskaydiaCove fonts
 mkdir ~/.fonts
 pwd
-cp ./alacritty/CascadiaCode/* ~/.fonts
+cp ./alacritty/fonts/* ~/.fonts
 sudo fc-cache -fv
