@@ -8,7 +8,7 @@ alias qq="exit"
 alias obsidian="flatpak run md.obsidian.Obsidian"
 alias clear="echo 'Please use CTRL+L'"
 alias laude="claude"
-alias headcommit="git log --online | head -n 1"
+alias headcommit="git log --oneline | head -n 1"
 
 # paths
 set PATH "$PATH:/home/parth/flutterSDK/bin"
