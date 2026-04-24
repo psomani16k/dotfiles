@@ -8,6 +8,7 @@ alias qq="exit"
 alias obsidian="flatpak run md.obsidian.Obsidian"
 alias clear="echo 'Please use CTRL+L'"
 alias laude="claude"
+alias headcommit="git log --online | head -n 1"
 
 # paths
 set PATH "$PATH:/home/parth/flutterSDK/bin"
@@ -49,16 +50,16 @@ set -x JAVA_HOME /usr/lib/jvm/jre-25-openjdk
 #     # Maybe set ZELLIJ_AUTO_ATTACH / ZELLIJ_AUTO_EXIT
 #     eval (zellij setup --generate-auto-start fish | string collect)
 # end
-if not set -q ZELLIJ
-    if test "$ZELLIJ_AUTO_ATTACH" = true
-        zellij attach -c
-    else
-        zellij
-    end
-
-    if test "$ZELLIJ_AUTO_EXIT" = true
-        kill $fish_pid
-    end
-end
+# if not set -q ZELLIJ
+#     if test "$ZELLIJ_AUTO_ATTACH" = true
+#         zellij attach -c
+#     else
+#         zellij
+#     end
+#
+#     if test "$ZELLIJ_AUTO_EXIT" = true
+#         kill $fish_pid
+#     end
+# end
 
 set -x GITLAB_HOME /srv/gitlab
