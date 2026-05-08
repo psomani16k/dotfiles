@@ -144,3 +144,31 @@ clear
 exit
 open downloaded-logs-20260420-172824.json | flatten
 exit
+cd
+ls
+nvim .
+ls
+nvim .
+cat runo_agent_data.csv
+open runo_agent_data.csv
+open runo_agent_data.csv | to json
+open runo_agent_data.csv | to json | save runo.json
+nvim .
+open runo_agent_data.csv
+open runo_agent_data.csv | select 'name' 'phoneNumber'
+cd
+ls
+open downloaded-logs-20260506-191015.json
+open downloaded-logs-20260506-191015.json | flatten
+open downloaded-logs-20260506-191015.json | select "customer_id"
+open downloaded-logs-20260506-191015.json | flatten 
+open downloaded-logs-20260506-191015.json | select customer_id
+open downloaded-logs-20260506-191015.json | select *
+open downloaded-logs-20260506-191015.json | select "jsonPayload.customer_id"
+open downloaded-logs-20260506-191015.json | select "insertId"
+open downloaded-logs-20260506-191015.json | select "jsonPayload"
+open downloaded-logs-20260506-191015.json | get "jsonPayload.customer_id"
+open downloaded-logs-20260506-191015.json | get jsonPayload.customer_id
+open downloaded-logs-20260506-191015.json | get jsonPayload.customer_id | uniq -c
+qq
+exit

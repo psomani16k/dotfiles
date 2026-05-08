@@ -36,6 +36,12 @@
   "modalAnimationSpeed": 0,
   "modalCustomAnimationDuration": 150,
   "enableRippleEffects": true,
+  "blurEnabled": false,
+  "blurForegroundLayers": true,
+  "blurLayerOutlineOpacity": 0.12,
+  "blurBorderColor": "outline",
+  "blurBorderCustomColor": "#ffffff",
+  "blurBorderOpacity": 0.35,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
@@ -52,6 +58,9 @@
   "selectedGpuIndex": 0,
   "enabledGpuPciIds": [],
   "showSystemTray": true,
+  "systemTrayIconTintMode": "none",
+  "systemTrayIconTintSaturation": 50,
+  "systemTrayIconTintStrength": 135,
   "showClock": true,
   "showNotificationButton": true,
   "showBattery": true,
@@ -187,6 +196,11 @@
   "centeringMode": "index",
   "clockDateFormat": "",
   "lockDateFormat": "",
+  "greeterRememberLastSession": true,
+  "greeterRememberLastUser": true,
+  "greeterEnableFprint": false,
+  "greeterEnableU2f": false,
+  "greeterWallpaperPath": "",
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "grid",
@@ -281,6 +295,10 @@
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
   "terminalsAlwaysDark": true,
+  "muxType": "tmux",
+  "muxUseCustomCommand": false,
+  "muxCustomCommand": "",
+  "muxSessionFilter": "",
   "runDmsMatugenTemplates": true,
   "matugenTemplateGtk": true,
   "matugenTemplateNiri": true,
@@ -303,6 +321,7 @@
   "matugenTemplateKcolorscheme": true,
   "matugenTemplateVscode": true,
   "matugenTemplateEmacs": true,
+  "matugenTemplateZed": true,
   "showDock": false,
   "dockAutoHide": false,
   "dockSmartAutoHide": false,
@@ -344,6 +363,8 @@
   "lockAtStartup": false,
   "enableFprint": false,
   "maxFprintTries": 15,
+  "enableU2f": false,
+  "u2fMode": "or",
   "lockScreenActiveMonitor": "all",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
@@ -439,7 +460,11 @@
       "centerWidgets": [
         "music",
         "clock",
-        "weather"
+        "weather",
+        {
+          "id": "dankPomodoroTimer",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
         "cpuUsage",
@@ -558,6 +583,13 @@
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
+    },
+    "dankNotepadModule": {
+      "previewActive": false,
+      "currentFilePath": "/home/parth/notes/20APR.txt",
+      "currentFileExtension": "txt",
+      "sourceContent": "1. Check where we are fetching payment info from.\nsldkjflksdj\n ",
+      "updatedAt": 1778221553928
     }
   },
   "clipboardEnterToPaste": false,

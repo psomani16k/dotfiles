@@ -5,5 +5,8 @@
   },
   "dankNotepadModule": {
     "enabled": true
+  },
+  "dankPomodoroTimer": {
+    "enabled": true
   }
 }

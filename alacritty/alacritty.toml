@@ -10,7 +10,7 @@ x = 10
 y = 10
 
 [font]
-size = 10
+size = 12
 
 [font.normal]
 family = "CaskaydiaCove Nerd Font Mono"
@@ -41,7 +41,7 @@ mods = "Control|Alt"
 action = "Paste"
 
 [terminal]
-shell = { program = "zellij" }
+shell = { program = "fish" }
 
 [general]
 import = ["~/.config/alacritty/dank-theme.toml"]
