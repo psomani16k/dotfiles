@@ -1,174 +1,134 @@
 ls
-clear
-ls
-exit
-$nu.config-path
-qq
 exit
 ls
-qq
-exit
-cd ../nushell/
-ls
+nu -v
+open may.payouts.md | from md
+cat may.payouts.md | from md
+cat may.payouts.md | from md | flatten
 nvim .
-exit
+cat may.payouts.md | from md | list
+cat may.payouts.md | from md 
+nvim .
+cat may.payouts.md | from csv --separator "|"
+cat may.payouts.md | from csv --separator "|" --skip 1
+cat may.payouts.md | from csv --separator "|" --skip 0
+cat may.payouts.md | from csv --separator "|" | to csv | save may.payouts.csv
+nvim may.payouts.csv
+open may.payouts.csv | trim all | save may.payouts.csv
 ls
-exit
-ls
+open may.payouts.csv
+open may.payouts.csv | get Amount | math sum
+open may.payouts.csv | get  Amount | math sum
+nvim may.payouts.csv
+open may.payouts.csv | get  Amount | math sum
 cd
-ls
-cd Downloads/takeout-20260306T032219Z-3-001/
+cd mono
+exit
 l
-la
 ls
-cd `Takeout/Google Photos/Archive/`
-find
-find .
-ls
-cd ..
-ls
-find .
-find
-find .
-exit
-cd Projects/
-find .
-bash find .
-bash -c find .
-ls
-la
-ls
-exit
-ls
-find .
-rmrf temp
-rm -rf temp
-ls
-rm -rf hack
-ls
-find
-bash -c find .
-find .
-ls
-cd thesis
-ls
-cd e02122002
-cd env
-ls
-docker compose up -d
-find .
-ls
-cd ..
-find .
-which find
-find --help
-find --help | less
-ls
-cd data/bake/source/
-ls
-cd ns-3-dce/
-ls
-cat compile_commands.json
-cat compile_commands.json | from json
-cat compile_commands.json | from json | to yaml
-cat compile_commands.json | from json | to csv
-exit
-ls
-adb
-adb devices
-cd Projects/
-ls
-cd ..
-rm -rf Projects/
-ls
-cd projects/
-ls
-cd spectecle_/
-ls
-cd spectecle_mobile/
-flutter run
+open may.payouts.csv | get  Amount | math sum
+nvim .
 qq
 exit
-flutter run --release
 ls
-lls
+open hq.json
+open hq.json | get questions
+open hq.json | get questions | where insurer="MAGMA_OPD"
+open hq.json | get questions | where insurer == "MAGMA_OPD"
 ls
+ls | grep json
+open downloaded-logs-20260515-164242.json 
+open downloaded-logs-20260515-164242.json | select jsonPayload
+open downloaded-logs-20260515-164242.json | select jsonPayload.message
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request.fields
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request.fields.qa_sql_score
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request.fields.qa_call_summary
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request.fields.
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request.fields | to csv | save temp.csv
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request.mobile
+open downloaded-logs-20260515-164242.json | select jsonPayload.message.request.mobile | grep 88790
+open downloaded-logs-20260515-164242.json | where jsonPayload.message.request.mobile == "+918879023163"
+open downloaded-logs-20260515-164242.json | where jsonPayload.message.request.mobile == "+918879023163" | select jsonPayload.message.request
+open downloaded-logs-20260515-164242.json | where jsonPayload.message.request.mobile == "+918879023163" | select jsonPayload.message.request | to json | save temp.json
+open temp.json
 nvim .
-cd ../..
 ls
-cd spectecle/
+ls | grep json
+rmrf downloaded-logs-20260515-164242.json temp.csv temp.json
+rm -rf downloaded-logs-20260515-164242.json temp.csv temp.json
+exit
+open hq.json
+open hq.json | get questions | where insurer == "MAGMA_OPD"
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select "uid" "subquestion_uids"
+open hq.json | get questions | where insurer == "MAGMA_OPD"
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select subquestion_uids
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select "subquestion_uids"
+open hq.json | get questions | where insurer == "MAGMA_OPD" | get "subquestion_uids"
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid
+open hq.json | get questions | where insurer == "MAGMA_OPD"
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids
 ls
-npm run tauri android dev
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids?
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids? is_subquestion
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids? is_subquestion | to json | save sub_questions.json
+nvim .
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids? is_subquestion | | sort-by is_subquestion | to json | save sub_questions.json
+rmrf sub_questions.json
+rm sub_questions.json
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids? is_subquestion | | sort-by is_subquestion | to json | save sub_questions.json
+nvim .
+open combined.csv 
+open combined.csv | to json | save combined.json
 qq
 exit
-npm run tauri android dev
-npm run tauri dev android
+ls
+open combined.json
+open combined.json | select json_uid
+open combined.json | select json_uid json_subquestion_uids
+open combined.json | select json_uid
+open combined.json | select json_uid | into string
+open combined.json | select json_uid | to text
+(open combined.json | select json_uid).json_uid | to text
+exit
+open runousers.json 
+open runousers.json | to csv | save runousers.csv
+open runousers.json | to csv
+open runousers.json<\n>| update process { |r| $r.process | str join " | " }<\n>| to csv
+open runousers.json <\n>| update process { |r| $r.process | str join " | " }<\n>| to csv<\n>| save runousers.csv
+rmrf runousers.csv
+rm -rf runousers.csv
+open runousers.json <\n>| update process { |r| $r.process | str join " | " }<\n>| to csv<\n>| save runousers.csv
 nvim .
-ls
-cd ../spectecle_/
-ls
-cd spectecle_desktop/
-ls
-cd ..
-fish
-ls
-cd ../temp/
-ls
-cd spectecle/
-ls
 qq
 exit
-npm run tauri dev android
-npm run tauri init android
-cargo tauri init andoir
-cargo tauri android init
-npm run tauri android dev
-exit
-bash -c npm run tauri android dev
+open downloaded-logs-20260515-164242.json
+open downloaded-logs-20260520-123817.json
+ls
+open downloaded-logs-20260520-123817.json
+ls
+open downloaded-logs-20260520-123817.json | select insertId
+open downloaded-logs-20260520-123817.json
+open downloaded-logs-20260520-123817.json | select insertId jsonPayload.message.request.exec_id?
+open downloaded-logs-20260520-123817.json | select insertId jsonPayload.message.request.exec_id? | to csv | save query.csv
 nvim .
-cd ../..
-rmrf temp
+exit
+ls
+exit
+open query_result_2026-05-20T16_21_09.890731429+05_30.json
+open query_result_2026-05-20T16_21_09.890731429+05_30.json | explore
+open query_result_2026-05-20T16_21_09.890731429+05_30.json | select user_reasons__reasons
+open query_result_2026-05-20T16_21_09.890731429+05_30.json | where "ONBOARDING_AUTO_REFUND" in  user_reasons__reasons
+open query_result_2026-05-20T16_21_09.890731429+05_30.json | where user_reasons__reasons =~ "ONBOARDING_AUTO_REFUND"
+open query_result_2026-05-20T16_21_09.890731429+05_30.json | where user_reasons__reasons =~ "ONBOARDING_AUTO_REFUND" | sort-by timestamp | select timestmp
+open query_result_2026-05-20T16_21_09.890731429+05_30.json | where user_reasons__reasons =~ "ONBOARDING_AUTO_REFUND" | sort-by timestamp | select timestamp
+rmrf query_result_2026-05-20T16_21_09.890731429+05_30.json
+rm -rf query_result_2026-05-20T16_21_09.890731429+05_30.json
+ls
 cd
-cd .con
-cd .config/
-cd zellij/
 nvim .
-qq
-exit
-clear
-ls
-exit
-clear
-ls
-clear
-exit
-open downloaded-logs-20260420-172824.json | flatten
-exit
-cd
-ls
-nvim .
-ls
-nvim .
-cat runo_agent_data.csv
-open runo_agent_data.csv
-open runo_agent_data.csv | to json
-open runo_agent_data.csv | to json | save runo.json
-nvim .
-open runo_agent_data.csv
-open runo_agent_data.csv | select 'name' 'phoneNumber'
-cd
-ls
-open downloaded-logs-20260506-191015.json
-open downloaded-logs-20260506-191015.json | flatten
-open downloaded-logs-20260506-191015.json | select "customer_id"
-open downloaded-logs-20260506-191015.json | flatten 
-open downloaded-logs-20260506-191015.json | select customer_id
-open downloaded-logs-20260506-191015.json | select *
-open downloaded-logs-20260506-191015.json | select "jsonPayload.customer_id"
-open downloaded-logs-20260506-191015.json | select "insertId"
-open downloaded-logs-20260506-191015.json | select "jsonPayload"
-open downloaded-logs-20260506-191015.json | get "jsonPayload.customer_id"
-open downloaded-logs-20260506-191015.json | get jsonPayload.customer_id
-open downloaded-logs-20260506-191015.json | get jsonPayload.customer_id | uniq -c
-qq
 exit

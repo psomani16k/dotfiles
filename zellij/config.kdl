@@ -11,7 +11,7 @@ keybinds clear-defaults=true {
         bind "Ctrl Shift l" { SwitchToMode "locked"; }
         bind "Ctrl ;" { SwitchToMode "pane"; }
         bind "Ctrl '" { SwitchToMode "tab"; }
-        bind "Ctrl Shift s" { SwitchToMode "entersearch"; }
+        bind "Ctrl Shift s" { SwitchToMode "search"; }
 
         // actions
         bind "Alt Shift h" { MoveFocus "Left"; }
@@ -21,6 +21,7 @@ keybinds clear-defaults=true {
         // bind "Ctrl Alt q" { CloseFocus; }
         bind "Ctrl Alt e" { EditScrollback; }
         bind "Alt i" { ToggleFloatingPanes; }
+        bind "Ctrl Shift x" { SwitchToMode "scroll"; }
     }
     pane {
         // modes

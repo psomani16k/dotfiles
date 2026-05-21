@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo dnf install -y nu
+cargo binstall nu -y

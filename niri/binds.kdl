@@ -23,7 +23,7 @@ binds {
   }
 
   // Quick launch programs
-  Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+  Mod+T hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
 
   // keyboard for various actions
   XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
@@ -58,6 +58,10 @@ binds {
   // Mod+Ctrl+J { }
   // Mod+Ctrl+K { }
   Mod+Ctrl+L { consume-or-expel-window-right;}
+
+  // move window to monitor above/below
+  Mod+Shift+Ctrl+J { move-window-to-monitor-down; }
+  Mod+Shift+Ctrl+K { move-window-to-monitor-up; }
 
   Mod+R { switch-preset-column-width; }
   // Cycling through the presets in reverse order is also possible.

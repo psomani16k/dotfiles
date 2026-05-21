@@ -8,5 +8,9 @@
   },
   "dankPomodoroTimer": {
     "enabled": true
+  },
+  "dmsAgent": {
+    "enabled": true,
+    "extendedThinking": false
   }
 }
