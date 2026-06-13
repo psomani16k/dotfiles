@@ -312,6 +312,6 @@ include "dms/colors.kdl"
 include "dms/alttab.kdl"
 include "dms/outputs.kdl"
 include "dms/cursor.kdl"
-
+include "device_specific.kdl"
 
 include "dms/windowrules.kdl"
