@@ -1,0 +1,3 @@
+// debug {
+//     render-drm-device "/dev/dri/renderD128" // Adjust this path to your Nvidia DRM node if necessary
+// }
