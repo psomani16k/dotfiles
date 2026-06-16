@@ -22,6 +22,7 @@ keybinds clear-defaults=true {
         bind "Ctrl Alt e" { EditScrollback; }
         bind "Alt i" { ToggleFloatingPanes; }
         bind "Ctrl Shift x" { SwitchToMode "scroll"; }
+        bind "Ctrl Shift Space" { SwitchToMode "scroll"; }
     }
     pane {
         // modes
@@ -56,7 +57,26 @@ keybinds clear-defaults=true {
         bind "Ctrl c" { SwitchToMode "normal"; }
     }
     scroll {
-        bind "Ctrl c" { SwitchToMode "normal"; }
+        // exit scroll mode (snaps back to the bottom of the buffer)
+        bind "Ctrl c" "Esc" { ScrollToBottom; SwitchToMode "normal"; }
+        bind "Ctrl Shift Space" { ScrollToBottom; SwitchToMode "normal"; }
+
+        // vim-style navigation
+        bind "j" "Down" { ScrollDown; }
+        bind "k" "Up" { ScrollUp; }
+        bind "Ctrl d" { HalfPageScrollDown; }
+        bind "Ctrl u" { HalfPageScrollUp; }
+        bind "Ctrl f" "PageDown" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" { PageScrollUp; }
+        bind "g" { ScrollToTop; }
+        bind "G" { ScrollToBottom; }
+
+        // search within the scrollback (n / p to jump between matches)
+        bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
+
+        // yank with full vim motions: dumps the scrollback into $EDITOR (nvim),
+        // where real visual selection + y works, then returns here on quit
+        bind "y" "e" { EditScrollback; SwitchToMode "normal"; }
     }
     search {
         bind "Ctrl c" { SwitchToMode "normal"; }
@@ -111,7 +131,7 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "tokyo-night"
+theme "terafox"
 // theme "gruvbox"
  
 // Choose the base input mode of zellij.
@@ -213,7 +233,7 @@ pane_frames false
  
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
-// scrollback_editor "/usr/bin/vim"
+scrollback_editor "/usr/bin/nvim"
  
 // A fixed name to always give the Zellij session.
 // Consider also setting `attach_to_session true,`

@@ -464,10 +464,6 @@
         {
           "id": "dankPomodoroTimer",
           "enabled": true
-        },
-        {
-          "id": "dmsAgent",
-          "enabled": true
         }
       ],
       "rightWidgets": [
@@ -589,15 +585,20 @@
       "trigger": "?"
     },
     "dankNotepadModule": {
-      "previewActive": false,
+      "previewActive": true,
       "currentFilePath": "/home/parth/notes/20APR.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "MIS sftp setup - PR\n\nExposing loading amount - CX part is not related to the ticket, also should update the existing PR to have a common proto instead of magma specific proto as IPD also has loading. - PR\n\nHQ based STP/NSTP processing implementation. - \nIn progress\n\n\nOpen questions:\n1. can we collect ipd also on bima asba \n2. can we collect additional payment on UPI as well without cancelling mandate and taking 1 full payment \n3. can we get UW decision within 14 days for IPD \n4. can we get UW decision on API \n5. max loading amount for OPD - on Non stp need discussion w doc uday\n\ndo we knwo any pre-determined conditions where only care shine will be offered so we can directly show them shine (Care)\n",
-      "updatedAt": 1779695566231
+      "sourceContent": "",
+      "updatedAt": 1780636821342,
+      "highlightedHtml": ""
     }
   },
   "clipboardEnterToPaste": false,
-  "launcherPluginVisibility": {},
+  "launcherPluginVisibility": {
+    "obsidianSearch": {
+      "allowWithoutTrigger": true
+    }
+  },
   "launcherPluginOrder": [],
   "configVersion": 5
 }

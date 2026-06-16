@@ -10,7 +10,16 @@
     "enabled": true
   },
   "dmsAgent": {
-    "enabled": true,
+    "enabled": false,
     "extendedThinking": false
+  },
+  "obsidianSearch": {
+    "enabled": true,
+    "isFlatpak": true,
+    "vaultPath": "/home/parth/notes",
+    "noTrigger": true
+  },
+  "dmsLenovoBatterySettings": {
+    "enabled": true
   }
 }

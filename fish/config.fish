@@ -28,10 +28,11 @@ set -x NDK_HOME "$ANDROID_NDK_HOME"
 set PATH "$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools"
 
 # starship
-starship init fish | source
+# starship init fish | source
 
 source ~/.cargo/env.fish
 source ~/.ssh/api_keys.fish
+source ./theme.fish
 zoxide init fish | source
 
 # android build caching
@@ -63,3 +64,4 @@ if not set -q ZELLIJ
 end
 
 set -x GITLAB_HOME /srv/gitlab
+set -x MOZ_ENABLE_WAYLAND 1

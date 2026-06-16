@@ -132,3 +132,33 @@ ls
 cd
 nvim .
 exit
+open hq_magma.csv
+open combined.json 
+open combined.csv
+open combined.csv | to json | save combined.json
+qq
+exit
+open hq.json 
+open hq.json | select questions.insurer
+open hq.json | where questions.insurer="MAGMA_OPD"
+open hq.json | where questions.insurer = "MAGMA_OPD"
+open hq.json | select questions 
+nvim .
+open hq.json | get questions 
+open hq.json | get questions | where insurer == "MAGMA_OPD" | select uid subquestion_uids? is_subquestion | | sort-by is_subquestion | to json | save sub_questions.json
+open hq.json | get questions | where insurer == "MAGMA_OPD" 
+nvim .
+qq
+exit
+ls
+exit
+open hq.json | get questions | where insurer == "MAGMA_OPD" 
+nvim .
+open combined.json | to yaml | save combined.yaml
+nvim .
+qq
+exit
+open parth.har
+open parth.har | to json
+clear
+exit
