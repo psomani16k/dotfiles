@@ -1,18 +1,33 @@
 {
   "currentThemeName": "dynamic",
   "currentThemeCategory": "dynamic",
-  "customThemeFile": "",
-  "registryThemeVariants": {},
-  "matugenScheme": "scheme-vibrant",
+  "customThemeFile": "/home/parth/.config/DankMaterialShell/themes/gruvboxMulti/theme.json",
+  "registryThemeVariants": {
+    "everforest": "soft",
+    "amoledBlack": {
+      "dark": {
+        "flavor": "black",
+        "accent": "coral"
+      }
+    },
+    "flexoki": "blue",
+    "gruvboxMulti": {
+      "dark": {
+        "flavor": "material-hard-dark",
+        "accent": "green"
+      }
+    }
+  },
+  "matugenScheme": "scheme-expressive",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
-  "popupTransparency": 1,
+  "popupTransparency": 0.6,
   "dockTransparency": 1,
   "widgetBackgroundColor": "sch",
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
-  "cornerRadius": 12,
+  "cornerRadius": 18,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
@@ -36,7 +51,7 @@
   "modalAnimationSpeed": 0,
   "modalCustomAnimationDuration": 150,
   "enableRippleEffects": true,
-  "blurEnabled": false,
+  "blurEnabled": true,
   "blurForegroundLayers": true,
   "blurLayerOutlineOpacity": 0.12,
   "blurBorderColor": "outline",
@@ -448,7 +463,7 @@
       "id": "default",
       "name": "Main Bar",
       "enabled": true,
-      "position": 1,
+      "position": 0,
       "screenPreferences": [
         "all"
       ],
@@ -585,11 +600,11 @@
       "trigger": "?"
     },
     "dankNotepadModule": {
-      "previewActive": true,
-      "currentFilePath": "/home/parth/notes/20APR.txt",
+      "previewActive": false,
+      "currentFilePath": "notepad-files/untitled-1781576884426.txt",
       "currentFileExtension": "txt",
       "sourceContent": "",
-      "updatedAt": 1780636821342,
+      "updatedAt": 1781611741977,
       "highlightedHtml": ""
     }
   },

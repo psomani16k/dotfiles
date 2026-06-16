@@ -14,6 +14,12 @@ keybinds clear-defaults=true {
         bind "Ctrl Shift s" { SwitchToMode "search"; }
 
         // actions
+        bind "Alt Shift t" {
+            LaunchOrFocusPlugin "session-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+        }
         bind "Alt Shift h" { MoveFocus "Left"; }
         bind "Alt Shift j" { MoveFocus "Down"; }
         bind "Alt Shift k" { MoveFocus "Up"; }
@@ -151,8 +157,8 @@ default_shell "fish"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-// default_layout "compact"
- 
+default_layout "clean"
+
 // The folder in which Zellij will look for layouts
 // (Requires restart)
 // 
