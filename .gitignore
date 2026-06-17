@@ -5,10 +5,10 @@
 !/.gitignore
 !/wezterm/
 !/ghostty/
-!/nvim/
-!/fish/
+!/nvim/**
+!/fish/**
 !starship.toml
-!/alacritty/
+!/alacritty/**
 !/kwin_scripts/
 !/zellij/
 !/kitty/
