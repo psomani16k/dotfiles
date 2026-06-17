@@ -17,9 +17,9 @@ output "DP-2" {
 }
 
 output "eDP-1" {
-    mode "2560x1440@165.003"
+    mode "1920x1200@60.001"
     scale 1.25
-    position x=4992 y=270
+    position x=5376 y=768
     layout {
         always-center-single-column
     }
