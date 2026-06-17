@@ -5,9 +5,12 @@
 !/.gitignore
 !/wezterm/
 !/ghostty/
+!/nvim/
 !/nvim/**
+!/fish/
 !/fish/**
 !starship.toml
+!/alacritty/
 !/alacritty/**
 !/kwin_scripts/
 !/zellij/
