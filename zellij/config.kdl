@@ -91,8 +91,12 @@ keybinds clear-defaults=true {
         }
         // actions
         bind "Ctrl n" {
-            Run "zellij" "run" "--floating" "--borderless" "--close-on-exit" "--width" "50" "--height" "5" "--" "raddio" "run" "new-zellij-tab" {
+            Run "raddio" "run" "new-zellij-tab" {
+                floating true
                 close_on_exit true
+                borderless true
+                width "50"
+                height "3"
             }
             SwitchToMode "Normal"
         }
