@@ -17,8 +17,8 @@ input {
             // layout "us,ru"
             options "ctrl:nocaps"
  // If this section is empty, niri will fetch xkb settings
-      // from org.freedesktop.locale1. You can control these using
-      // localectl set-x11-keymap.
+        // from org.freedesktop.locale1. You can control these using
+        // localectl set-x11-keymap.
         }
         // Enable numlock on startup, omitting this setting disables it.
         numlock
@@ -102,7 +102,7 @@ position x=1280 y=0
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 2
+    gaps 8
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -185,7 +185,6 @@ layout {
     // For example, this is a pastel rainbow gradient via in="oklch longer hue".
     //
     // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-
     // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
     // You can enable drop shadows for windows.
@@ -314,5 +313,5 @@ include "dms/outputs.kdl"
 include "dms/cursor.kdl"
 include "device_specific.kdl"
 include "looks.kdl"
-
 include "dms/windowrules.kdl"
+

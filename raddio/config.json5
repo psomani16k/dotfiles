@@ -1,0 +1,57 @@
+{
+  "stations": [
+    {
+      "name": "echo",
+      "description": "Echo",
+      "run": [
+        "echo",
+        "{}"
+      ],
+      "override_ui": {
+        "max_height": 10,
+        "max_width": 70,
+        "rounded_corners": true,
+        "border": true,
+        "border_color": "#00ffFF",
+        "prefix": " => ",
+        "prefix_color": "#00FF00",
+        "multiline": true,
+        "cursor_style": "Block",
+        "cursor_color": "#FFFFFF"
+      }
+    },
+    {
+      "name": "new-zellij-session",
+      "description": "New Session",
+      "run": [
+        "zellij",
+        "attach",
+        "-c",
+        "{}"
+      ],
+    },
+    {
+      "name": "new-zellij-tab",
+      "description": "New Tab",
+      "run": [
+        "zellij",
+        "action",
+        "new-tab",
+        "--name",
+        "{}",
+      ],
+    },
+  ],
+  "ui": {
+    "max_height": 3,
+    "max_width": 50,
+    "rounded_corners": true,
+    "border": true,
+    "border_color": "#FFFFFF",
+    "prefix": "  ",
+    "prefix_color": "#FFFFFF",
+    "multiline": false,
+    "cursor_style": "Line",
+    "cursor_color": "#FFFFFF"
+  }
+}

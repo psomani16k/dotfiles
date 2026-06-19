@@ -23,3 +23,22 @@ layer-rule {
         blur true
     }
 }
+
+window-rule {
+    // Matches Zen Browser's Wayland App ID
+    match app-id="^zen$" 
+    
+    // Crucial: Stops Niri from drawing an opaque solid background box behind Zen
+    draw-border-with-background false 
+
+    // Enforces the compositor-side transparency level (adjust to your preference)
+
+    // Enables the blur engine
+    background-effect {
+        blur true
+        
+        // Optional: set to false if you want windows behind Zen to blur.
+        // Set to true if you only want your wallpaper to blur behind Zen (more performance-friendly).
+        xray false 
+    }
+}
