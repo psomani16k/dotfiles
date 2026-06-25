@@ -162,3 +162,9 @@ open parth.har
 open parth.har | to json
 clear
 exit
+nvim temp.json
+open temp.json
+zellij action list-tabs
+zellij action list-tabs | detect columns
+zellij action list-tabs | detect columns --guess 
+exit

@@ -1,0 +1,14 @@
+[metadata]
+name = "zellij-tabs"
+description = "Switch between Zellij tabs in the current session"
+
+[source]
+command = "zellij action query-tab-names"
+
+# Enter jumps to the highlighted tab
+[keybindings]
+enter = "actions:switch"
+
+[actions.switch]
+command = "zellij action go-to-tab-name '{split: :..}'"
+mode = "execute"

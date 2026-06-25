@@ -101,11 +101,29 @@ keybinds clear-defaults=true {
             SwitchToMode "Normal"
         }
         bind "Ctrl h" {
-            GoToPreviousTab
+            Run "tv" "zellij-tabs" {
+                floating true
+                close_on_exit true
+                borderless true
+            }
             SwitchToMode "Normal"
         }
         bind "Ctrl l" {
-            GoToNextTab
+            Run "tv" "zellij-sessions" {
+                floating true
+                close_on_exit true
+                borderless true
+            }
+            SwitchToMode "Normal"
+        }
+        bind "Ctrl s" {
+            Run "raddio" "run" "new-zellij-session" {
+                floating true
+                close_on_exit true
+                borderless true
+                width "50"
+                height "3"
+            }
             SwitchToMode "Normal"
         }
     }

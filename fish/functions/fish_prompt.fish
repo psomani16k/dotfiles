@@ -20,18 +20,18 @@ function fish_prompt
 
     echo
 
-    # ── Directory segment ──
+    # -- Directory segment --
     set_color $seg1_bg
     echo -n \ue0b6
     set_color $seg1_fg --background $seg1_bg
     echo -n " $(prompt_pwd) "
 
-    # ── Git branch segment (conditional) ──
+    # -- Git branch segment (conditional) --
     set -l branch (command git branch --show-current 2>/dev/null)
     if test -n "$branch"
         set_color $seg1_bg --background $seg2_bg
         echo -n \ue0b4
-        set_color $seg2_fg --background $seg2_bg
+        set_color $seg1_fg --background $seg2_bg
         echo -n "  $branch "
         set_color $seg2_bg --background $seg3_bg
         echo -n \ue0b4
@@ -40,13 +40,18 @@ function fish_prompt
         echo -n \ue0b4
     end
 
-    # ── Time segment ──
+    # -- Zellij session/tab segment --
     set_color $seg3_fg --background $seg3_bg
-    echo -n "  $(date +%H:%M) "
+    if set -q ZELLIJ_SESSION_NAME
+        set -l tab_name (zellij action current-tab-info 2>/dev/null | string replace -rf '^name: ' '')
+        echo -n "  $ZELLIJ_SESSION_NAME/$tab_name "
+    else
+        echo -n "  $(date +%H:%M) "
+    end
     set_color $seg3_bg --background normal
     echo -n \ue0b4
 
-    # ── Character prompt ──
+    # -- Character prompt --
     echo
     if test $last_status -eq 0
         set_color $green
