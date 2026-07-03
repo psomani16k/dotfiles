@@ -168,3 +168,7 @@ zellij action list-tabs
 zellij action list-tabs | detect columns
 zellij action list-tabs | detect columns --guess 
 exit
+ls
+open docs/questionnaire.csv
+clear
+qq

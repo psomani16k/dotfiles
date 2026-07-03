@@ -73,6 +73,9 @@ complete -c zellij -n "__fish_seen_subcommand_from options" -l focus-follows-mou
 complete -c zellij -n "__fish_seen_subcommand_from options" -l mouse-click-through -d 'Whether clicking a pane to focus it also sends the click into the pane (true or false) default is false' -r -f -a "{true	,false	}"
 complete -c zellij -n "__fish_seen_subcommand_from options" -l post-command-discovery-hook -d 'A command to run after the discovery of running commands when serializing, for the purpose of manipulating the command (eg. with a regex) before it gets serialized' -r
 complete -c zellij -n "__fish_seen_subcommand_from options" -l client-async-worker-tasks -d 'Number of async worker tasks to spawn per active client' -r
+complete -c zellij -n "__fish_seen_subcommand_from options" -l mobile-layout -d 'When a newly-attaching client should land in the mobile UI plugin (web, always, never)' -r -f -a "{web	,always	,never	}"
+complete -c zellij -n "__fish_seen_subcommand_from options" -l mobile-threshold-cols -d 'Column breakpoint for mobile_layout (0 to always match)' -r
+complete -c zellij -n "__fish_seen_subcommand_from options" -l mobile-threshold-rows -d 'Row breakpoint for mobile_layout (0 to always match)' -r
 complete -c zellij -n "__fish_seen_subcommand_from options" -s h -l help -d 'Print help information'
 complete -c zellij -n "__fish_seen_subcommand_from setup" -l dump-layout -d 'Dump specified layout to stdout' -r
 complete -c zellij -n "__fish_seen_subcommand_from setup" -l dump-swap-layout -d 'Dump the specified swap layout file to stdout' -r
@@ -370,6 +373,8 @@ complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subco
 complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subcommand_from list-tabs" -s j -l json -d 'Output as JSON'
 complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subcommand_from list-tabs" -s h -l help -d 'Print help information'
 complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subcommand_from current-tab-info" -s j -l json -d 'Output as JSON with full TabInfo'
+complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subcommand_from current-tab-info" -s n -l name -d 'Output only the tab name'
+complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subcommand_from current-tab-info" -s i -l id -d 'Output only the tab id'
 complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subcommand_from current-tab-info" -s h -l help -d 'Print help information'
 complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subcommand_from toggle-pane-pinned" -s p -l pane-id -d 'Target a specific pane by ID (eg. terminal_1, plugin_2, or 3)' -r
 complete -c zellij -n "__fish_seen_subcommand_from action; and __fish_seen_subcommand_from toggle-pane-pinned" -s h -l help -d 'Print help information'
@@ -462,6 +467,9 @@ complete -c zellij -n "__fish_seen_subcommand_from attach; and __fish_seen_subco
 complete -c zellij -n "__fish_seen_subcommand_from attach; and __fish_seen_subcommand_from options" -l mouse-click-through -d 'Whether clicking a pane to focus it also sends the click into the pane (true or false) default is false' -r -f -a "{true	,false	}"
 complete -c zellij -n "__fish_seen_subcommand_from attach; and __fish_seen_subcommand_from options" -l post-command-discovery-hook -d 'A command to run after the discovery of running commands when serializing, for the purpose of manipulating the command (eg. with a regex) before it gets serialized' -r
 complete -c zellij -n "__fish_seen_subcommand_from attach; and __fish_seen_subcommand_from options" -l client-async-worker-tasks -d 'Number of async worker tasks to spawn per active client' -r
+complete -c zellij -n "__fish_seen_subcommand_from attach; and __fish_seen_subcommand_from options" -l mobile-layout -d 'When a newly-attaching client should land in the mobile UI plugin (web, always, never)' -r -f -a "{web	,always	,never	}"
+complete -c zellij -n "__fish_seen_subcommand_from attach; and __fish_seen_subcommand_from options" -l mobile-threshold-cols -d 'Column breakpoint for mobile_layout (0 to always match)' -r
+complete -c zellij -n "__fish_seen_subcommand_from attach; and __fish_seen_subcommand_from options" -l mobile-threshold-rows -d 'Row breakpoint for mobile_layout (0 to always match)' -r
 complete -c zellij -n "__fish_seen_subcommand_from attach; and __fish_seen_subcommand_from options" -s h -l help -d 'Print help information'
 complete -c zellij -n "__fish_seen_subcommand_from watch" -s h -l help -d 'Print help information'
 complete -c zellij -n "__fish_seen_subcommand_from kill-session" -s h -l help -d 'Print help information'

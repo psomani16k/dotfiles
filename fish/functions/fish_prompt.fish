@@ -43,7 +43,7 @@ function fish_prompt
     # -- Zellij session/tab segment --
     set_color $seg3_fg --background $seg3_bg
     if set -q ZELLIJ_SESSION_NAME
-        set -l tab_name (zellij action current-tab-info 2>/dev/null | string replace -rf '^name: ' '')
+        set -l tab_name (zellij action current-tab-info --name)
         echo -n "  $ZELLIJ_SESSION_NAME/$tab_name "
     else
         echo -n "  $(date +%H:%M) "
