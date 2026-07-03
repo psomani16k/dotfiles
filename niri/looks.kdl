@@ -37,9 +37,8 @@ window-rule {
     // Enables the blur engine
     background-effect {
         blur true
-        
         // Optional: set to false if you want windows behind Zen to blur.
         // Set to true if you only want your wallpaper to blur behind Zen (more performance-friendly).
-        xray false 
+        xray true 
     }
 }

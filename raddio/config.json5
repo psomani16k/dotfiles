@@ -24,9 +24,10 @@
       "name": "new-zellij-session",
       "description": "New Session",
       "run": [
-        "sh", "-c",
-        "zellij attach --create-background \"$1\" && zellij action switch-session \"$1\"",
-        "sh", "{}"
+        "zellij",
+        "action",
+        "switch-session",
+        "{}",
       ],
     },
     {
@@ -46,9 +47,9 @@
     "max_width": 50,
     "rounded_corners": true,
     "border": true,
-    "border_color": "#52869C",
+    "border_color": "#FF8349",
     "prefix": "  ",
-    "prefix_color": "#52869C",
+    "prefix_color": "#7AA4A1",
     "multiline": false,
     "cursor_style": "Line",
     "cursor_color": "#FFFFFF"

@@ -499,7 +499,7 @@
       "spacing": 2,
       "innerPadding": 4,
       "bottomGap": -1,
-      "transparency": 1,
+      "transparency": 0.6,
       "widgetTransparency": 1,
       "squareCorners": false,
       "noBackground": false,
@@ -521,7 +521,8 @@
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
-      "maximizeDetection": true
+      "maximizeDetection": true,
+      "clickThrough": false
     }
   ],
   "desktopClockEnabled": false,
