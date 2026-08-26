@@ -172,3 +172,108 @@ ls
 open docs/questionnaire.csv
 clear
 qq
+open integrations/even/retail_questionnaire.json
+open integrations/even/retail_questionnaire.json | where 'questions.insurer' != "DIGIT_IPD"
+open integrations/even/retail_questionnaire.json | select questions | where 'questions.insurer' != "DIGIT_IPD"
+open integrations/even/retail_questionnaire.json | select 'questions'
+open integrations/even/retail_questionnaire.json | pick 'questions'
+open integrations/even/retail_questionnaire.json | use questions
+open integrations/even/retail_questionnaire.json | get questions
+open integrations/even/retail_questionnaire.json | get questions | where 'questions.insurer' != "DIGIT_IPD"
+open integrations/even/retail_questionnaire.json | get questions | where 'insurer' != "DIGIT_IPD"
+open integrations/even/retail_questionnaire.json | get questions | where 'insurer' != "DIGIT_IPD" | select 'answer_type'
+open integrations/even/retail_questionnaire.json | get questions | where 'insurer' == "DIGIT_IPD" | select answer_type
+open integrations/even/retail_questionnaire.json | get questions | where 'insurer' == "MAGMA_OPD"
+qq
+exit
+open integrations/even/retail_questionnaire.json | get questions | where 'insurer' == "MAGMA_OPD"
+open integrations/even/retail_questionnaire.json | get questions | where 'insurer' == "MAGMA_OPD" | select answer_type
+open integrations/even/retail_questionnaire.json | get questions | where 'insurer' == "MAGMA_OPD" | select answer_type uid
+open integrations/even/retail_questionnaire.json | get questions | select answer_type uid
+open integrations/even/retail_questionnaire.json | get questions | where 'insurer' != "CARE_IPD" | select answer_type uid
+open integrations/even/retail_questionnaire.json | get questions | where 'answer_type'? != null | select answer_type uid
+open integrations/even/retail_questionnaire.json | get questions | where answer_type? != null | select answer_type uid
+open integrations/even/retail_questionnaire.json | get questions | where answer_type? != null | select answer_type uid insurer
+open integrations/even/retail_questionnaire.json | get questions | where answer_type? != null | select answer_type uid insurer | select answer_type | uniq
+open integrations/even/retail_questionnaire.json | get questions | where answer_type? != null | select answer_type uid insurer | where answer_type == "DATE"
+open integrations/even/retail_questionnaire.json | get questions | where answer_type? != null | select answer_type uid insurer | select answer_type | uniq
+qq
+exit
+cd docs
+ls
+cd uw_flow_from_hq/
+open combined.json
+qq
+open combined.json
+ls
+open query_result_2026-07-14T15_06_05.443539382+05_30.json
+open query_result_2026-07-14T15_06_05.443539382+05_30.json | get timestamp
+open query_result_2026-07-14T15_06_05.443539382+05_30.json | get timestamp amount
+open query_result_2026-07-14T15_06_05.443539382+05_30.json | select timestamp amount
+open query_result_2026-07-14T15_06_05.443539382+05_30.json | select timestamp amount account_uid
+open query_result_2026-07-14T15_06_05.443539382+05_30.json | select timestamp amount path
+open query_result_2026-07-14T15_06_05.443539382+05_30.json | select timestamp amount _path
+open query_result_2026-07-14T15_06_05.443539382+05_30.json | select timestamp amount _path | sort-by timestamp
+open query_result_2026-07-14T15_06_05.443539382+05_30.json | select timestamp amount _path | sort-by timestamp | to json | save ~/onbrefunds/all_refunds.json
+qq
+exit
+open ./docs/all_refunds.json
+open ./docs/all_refunds.json 
+open ./docs/all_refunds.json | where refund_method=MANUAL
+open ./docs/all_refunds.json | where refund_method==MANUAL
+open ./docs/all_refunds.json | where refund_method == MANUAL
+open ./docs/all_refunds.json | where refund_method == MANUAL | select _path
+open ./docs/all_refunds.json | where refund_method == MANUAL | select _path | to csv | save ./docs/temp.csv
+exit
+ls
+cd down
+cd downl
+cd
+cd Downloads/
+ls
+sl
+ls
+ls | grep json
+open `Retail OPD.postman_collection.json`
+ls
+open stuck_onboarding_payments_2026-07-20T23_01_49.453507588+05_30.csv
+open stuck_onboarding_payments_2026-07-20T23_01_49.453507588+05_30.csv | to json | save stuck.json
+nvim .
+qq
+exit
+open `Even __ Coverstack _ June'26 Care IPD+Magma OPD HQ - PED Master + Mapping.csv`
+open `Even __ Coverstack _ June'26 Care IPD+Magma OPD HQ - PED Master + Mapping.csv` | to json | save release_questions.json
+ls
+mv release_questions.json ~/repos/monorepo/docs/
+qq
+exit
+ls
+cd docs
+ls
+cd cover
+cd coverstack_hq_dump/
+ls
+open questions.csv
+qq
+exit
+cd config
+exit
+nvim .
+open combined.json
+open combined.json | select json_uid
+open combined.json | select json_uid subquestion_uid
+open combined.json | select json_uid json_subquestion_uids
+open combined.json | select json_uid json_subquestion_uids | to csv | save temp.csv
+nvim .
+ls
+cd ..
+ls
+cd integrations/even
+ls
+cat zoho_invoice.go
+ls
+la | grep json
+ls | grep json
+cat retail_questionnaire.json
+open retail_questionnaire.json
+nvim .

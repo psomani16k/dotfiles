@@ -6,7 +6,6 @@ end
 alias rmrf="rm -rf"
 alias qq="exit"
 alias cd="z"
-alias obsidian="flatpak run md.obsidian.Obsidian"
 alias clear="echo 'Please use CTRL+L'"
 alias laude="/usr/local/bin/claude"
 alias headcommit="git log --oneline | head -n 1"

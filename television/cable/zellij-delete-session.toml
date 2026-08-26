@@ -1,0 +1,14 @@
+[metadata]
+name = "zellij-delete-session"
+description = "Delete Zellij sessions"
+
+[source]
+command = "zellij list-sessions --short"
+
+# Enter jumps to the highlighted tab
+[keybindings]
+enter = "actions:switch"
+
+[actions.switch]
+command = "zellij action switch-session '{split: :..}'"
+mode = "execute"

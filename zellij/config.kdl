@@ -90,18 +90,8 @@ keybinds clear-defaults=true {
             SwitchToMode "normal"
         }
         // actions
-        bind "Ctrl n" {
-            Run "raddio" "run" "new-zellij-tab" {
-                floating true
-                close_on_exit true
-                borderless true
-                width "50"
-                height "3"
-            }
-            SwitchToMode "Normal"
-        }
         bind "Ctrl h" {
-            Run "tv" "zellij-tabs" {
+            Run "raddio" "run" "zellij-tab" {
                 floating true
                 close_on_exit true
                 borderless true
@@ -109,20 +99,10 @@ keybinds clear-defaults=true {
             SwitchToMode "Normal"
         }
         bind "Ctrl l" {
-            Run "tv" "zellij-sessions" {
+            Run "raddio" "run" "zellij-session" {
                 floating true
                 close_on_exit true
                 borderless true
-            }
-            SwitchToMode "Normal"
-        }
-        bind "Ctrl s" {
-            Run "raddio" "run" "new-zellij-session" {
-                floating true
-                close_on_exit true
-                borderless true
-                width "50"
-                height "3"
             }
             SwitchToMode "Normal"
         }

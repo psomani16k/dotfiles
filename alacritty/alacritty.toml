@@ -41,7 +41,7 @@ mods = "Control|Alt"
 action = "Paste"
 
 [terminal]
-shell = { program = "fish" }
+# shell = { program = "fish" }
 
 [general]
 import = ["~/.config/alacritty/dank-theme.toml"]

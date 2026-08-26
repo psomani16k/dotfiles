@@ -16,6 +16,8 @@
 !/zellij/
 !/kitty/
 !/niri/
+!/hypr/
+!/hypr/**
 !/DankMaterialShell/
 !/danksearch/
 !/setup_misc/
@@ -28,3 +30,4 @@
 !/television/
 !/television/**
 /DankMaterialShell/plugins/
+/hypr/*.pre-migration

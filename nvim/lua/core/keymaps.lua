@@ -115,3 +115,4 @@ keymap.set("n", "<leader>cc", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "Tog
 
 -- misc
 keymap.set("n", "<leader>cs", ":nohl<CR>", { desc = "Clear Search Highlights" })
+keymap.set("n", "<leader>z", require("core.zen_mode").toggle_zen, { desc = "Toggle Zen mode" })

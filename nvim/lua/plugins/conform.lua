@@ -6,6 +6,7 @@ return {
       formatters_by_ft = {
         proto = { "clang_format" },
         kdl = { "kdlfmt" },
+        markdown = { "oxfmt" },
       },
     })
   end
