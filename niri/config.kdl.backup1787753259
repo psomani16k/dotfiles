@@ -315,4 +315,3 @@ include "device_specific.kdl"
 include "looks.kdl"
 include "dms/windowrules.kdl"
 
-include "dms/layout.kdl"

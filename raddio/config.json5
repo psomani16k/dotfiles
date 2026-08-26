@@ -8,6 +8,88 @@
   },
   "stations": [
     {
+      "id": "zellij-rename-session",
+      "metadata": {
+        "title": "Rename Zellij Session"
+      },
+      "behavior": {
+        "picker_type": "EntryBox",
+        "search_type": null,
+        "key_maps": [
+          {
+            "modifiers": "",
+            "key": "Enter",
+            "action": {
+              "ExecuteWithTypedInput": [
+                "zellij",
+                "action",
+                "rename-session",
+                "{}"
+              ]
+            },
+            "replace_string": "{}",
+            "detached": false
+          }
+        ]
+      },
+      "ui": {
+        "constraints": {
+          "max_height": 3,
+          "max_width": 50
+        },
+        "colors": null
+      }
+    },
+    {
+      "id": "zellij-delete-sessions",
+      "metadata": {
+        "title": "Zellij Tab"
+      },
+      "behavior": {
+        "picker_type": {
+          "MultiChoice": {
+            "command": [
+              "zellij",
+              "list-sessions",
+              "--short"
+            ],
+            "separator": "\n"
+          }
+        },
+        "search_type": "SubStringCaseInsensitive",
+        "key_maps": [
+          {
+            "modifiers": "",
+            "key": "Enter",
+            "action": {
+              "ExecuteForEachAndExit": [
+                "zellij",
+                "delete-session",
+                "{}"
+              ]
+            },
+            "replace_string": "{}",
+            "detached": false
+          },
+          {
+            "modifiers": "CONTROL",
+            "key": "Enter",
+            "action": {
+              "ExecuteForEachAndExit": [
+                "zellij",
+                "delete-session",
+                "-f",
+                "{}"
+              ]
+            },
+            "replace_string": "{}",
+            "detached": false
+          }
+        ]
+      },
+      "ui": null
+    },
+    {
       "id": "zellij-tab",
       "metadata": {
         "title": "Zellij Tab"
@@ -29,7 +111,7 @@
             "modifiers": "CONTROL",
             "key": "Enter",
             "action": {
-              "ExecuteWithTyped": [
+              "ExecuteWithTypedInput": [
                 "zellij",
                 "action",
                 "new-tab",
@@ -80,7 +162,7 @@
             "modifiers": "CONTROL",
             "key": "Enter",
             "action": {
-              "ExecuteWithTyped": [
+              "ExecuteWithTypedInput": [
                 "zellij",
                 "action",
                 "switch-session",
@@ -101,97 +183,6 @@
                 "{}"
               ]
             },
-            "replace_string": "{}",
-            "detached": false
-          }
-        ]
-      },
-      "ui": null
-    },
-    {
-      "id": "git-add-multi",
-      "metadata": {
-        "title": null
-      },
-      "behavior": {
-        "picker_type": {
-          "MultiChoice": {
-            "command": [
-              "git",
-              "diff",
-              "--name-only"
-            ],
-            "separator": "\n"
-          }
-        },
-        "search_type": "FuzzySearch",
-        "key_maps": [
-          {
-            "modifiers": "",
-            "key": "Enter",
-            "action": {
-              "ExecuteMultiParamAndExit": [
-                "git",
-                "add",
-                "{}"
-              ]
-            },
-            "replace_string": "{}",
-            "detached": false
-          },
-          {
-            "modifiers": "CONTROL",
-            "key": {
-              "Char": "c"
-            },
-            "action": {
-              "ExecuteMultiParamAndExit": [
-                "git",
-                "add",
-                "{}"
-              ]
-            },
-            "replace_string": "{}",
-            "detached": false
-          }
-        ]
-      },
-      "ui": null
-    },
-    {
-      "id": "find",
-      "metadata": {
-        "title": "Find"
-      },
-      "behavior": {
-        "picker_type": {
-          "MultiChoice": {
-            "command": [
-              "find"
-            ],
-            "separator": "\n"
-          }
-        },
-        "search_type": "SubStringCaseInsensitive",
-        "key_maps": [
-          {
-            "modifiers": "",
-            "key": "Enter",
-            "action": {
-              "ExecuteMultiParamAndExit": [
-                "xdg-open",
-                "{}"
-              ]
-            },
-            "replace_string": "{}",
-            "detached": true
-          },
-          {
-            "modifiers": "CONTROL",
-            "key": {
-              "Char": "c"
-            },
-            "action": "Exit",
             "replace_string": "{}",
             "detached": false
           }

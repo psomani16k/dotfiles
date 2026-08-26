@@ -106,6 +106,24 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "Normal"
         }
+        bind "Ctrl d" {
+            Run "raddio" "run" "zellij-delete-sessions" {
+                floating true
+                close_on_exit true
+                borderless true
+            }
+            SwitchToMode "Normal"
+        }
+        bind "Ctrl n" {
+            Run "raddio" "run" "zellij-rename-session" {
+                floating true
+                close_on_exit true
+                borderless true
+                width "50"
+                height "3"
+            }
+            SwitchToMode "Normal"
+        }
     }
     resize {
         bind "Ctrl c" {
