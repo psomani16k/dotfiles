@@ -1,11 +1,5 @@
 {
-  "ui": {
-    "constraints": {
-      "max_height": 3,
-      "max_width": 10
-    },
-    "colors": null
-  },
+  "ui": null,
   "stations": [
     {
       "id": "zellij-rename-session",
