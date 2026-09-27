@@ -8,6 +8,7 @@ alias qq="exit"
 alias cd="z"
 alias clear="echo 'Please use CTRL+L'"
 alias laude="/usr/local/bin/claude"
+alias headcommit="git log --oneline | head -n 1"
 
 # paths
 set PATH "$PATH:/home/parth/flutterSDK/bin"
@@ -41,7 +42,7 @@ set -x CCACHE_EXEC /usr/bin/ccache
 set -x EDITOR /usr/bin/nvim
 
 # go and bazel related stuff
-set -x USE_BAZEL_VERSION 8.7.0
+set -x USE_BAZEL_VERSION 7.6.0
 set -x JAVA_HOME /usr/lib/jvm/jre-25-openjdk
 
 # The following snippet is meant to be used like this in your fish configuration:

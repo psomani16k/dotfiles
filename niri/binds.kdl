@@ -24,6 +24,7 @@ binds {
 
   // Quick launch programs
   Mod+T hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
+  Mod+B hotkey-overlay-title="Open BTOP" { spawn "alacritty" "-e" "btop"; }
 
   // keyboard for various actions
   XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }

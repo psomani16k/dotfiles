@@ -14,10 +14,11 @@
     "extendedThinking": false
   },
   "obsidianSearch": {
-    "enabled": true,
+    "enabled": false,
     "isFlatpak": true,
     "vaultPath": "/home/parth/notes",
-    "noTrigger": true
+    "noTrigger": false,
+    "trigger": "/note"
   },
   "dmsLenovoBatterySettings": {
     "enabled": true

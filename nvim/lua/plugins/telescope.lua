@@ -19,7 +19,7 @@ return {
 
     telescope.setup({
       defaults = {
-        path_display = { "smart" },
+        path_display = { "truncate" },
         mappings = {
           i = {
             ["<C-CR>"] = actions.select_vertical,
